@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (5.10.2)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - Kingfisher (8.5.0)
+  - ObjectMapper (4.4.2)
+  - RxCocoa (6.9.0):
+    - RxRelay (= 6.9.0)
+    - RxSwift (= 6.9.0)
+  - RxRelay (6.9.0):
+    - RxSwift (= 6.9.0)
+  - RxSwift (6.9.0)
+  - SnapKit (5.7.1)
+  - SwiftyJSON (5.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.6)
+  - ImageSlideshow (~> 1.9)
+  - Kingfisher (~> 8.5)
+  - ObjectMapper (~> 4.4)
+  - RxCocoa (~> 6.9)
+  - RxSwift (~> 6.9)
+  - SnapKit (~> 5.0)
+  - SwiftyJSON (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ImageSlideshow
+    - Kingfisher
+    - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  Kingfisher: ff0d31a1f07bdff6a1ebb3ba08b8e6e567b6500c
+  ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
+  RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
+  RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
+  RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
+
+PODFILE CHECKSUM: c369bcfa807e0458ace3eca2ed652515b7a809b3
+
+COCOAPODS: 1.16.2
