@@ -50,7 +50,7 @@ class LiveCh7PlayerCollectionViewCell: UICollectionViewCell {
         
         // กำหนดให้ AVPlayerViewController ใช้ queuePlayer
         playerViewController.player = queuePlayer
-        playerViewController.showsPlaybackControls = false // ซ่อนปุ่มควบคุม
+        playerViewController.showsPlaybackControls = true // ซ่อนปุ่มควบคุม
         
         // นำ View ของ AVPlayerViewController มาแสดงใน cell
         contentView.addSubview(playerViewController.view)
