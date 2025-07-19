@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34C276E99C7BBE080E2ACD46 /* Pods_BugabooTV7_BugabooTV7UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDA5F34F65478629659A2DF /* Pods_BugabooTV7_BugabooTV7UITests.framework */; };
-		86E20B646BAD3669122BA2C0 /* Pods_BugabooTV7Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BD265525B4211765DC1031 /* Pods_BugabooTV7Tests.framework */; };
-		8879206B1B85C6A7DF12C8AF /* Pods_BugabooTV7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF5FD5CBEE5471F1E42C9D3 /* Pods_BugabooTV7.framework */; };
+		8657A3B4EDF3E5A108418A96 /* Pods_BugabooTV7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */; };
+		A88B27182E2B4AE800029933 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B27172E2B4AE800029933 /* APIService.swift */; };
+		A88B271B2E2B4B0300029933 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B271A2E2B4B0300029933 /* APIEndpoint.swift */; };
+		A88B271D2E2B4B2600029933 /* LiveChannelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B271C2E2B4B2600029933 /* LiveChannelsModel.swift */; };
+		A88B271F2E2B4B4000029933 /* HighlightMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B271E2E2B4B4000029933 /* HighlightMenuModel.swift */; };
+		A88B27232E2B627000029933 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B27212E2B627000029933 /* WelcomeCollectionViewCell.swift */; };
+		A88B27242E2B627000029933 /* WelcomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A88B27222E2B627000029933 /* WelcomeCollectionViewCell.xib */; };
 		A8A4E3592E2948D900E71A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E3582E2948D900E71A9F /* AppDelegate.swift */; };
 		A8A4E35B2E2948D900E71A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E35A2E2948D900E71A9F /* SceneDelegate.swift */; };
 		A8A4E35D2E2948D900E71A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E35C2E2948D900E71A9F /* ViewController.swift */; };
@@ -27,6 +31,11 @@
 		A8A4E3992E29EEBE00E71A9F /* UIView + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E3982E29EEBE00E71A9F /* UIView + Extention.swift */; };
 		A8A4E39B2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E39A2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift */; };
 		A8A4E39D2E29FF1100E71A9F /* categoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E39C2E29FF1100E71A9F /* categoryModel.swift */; };
+		A8A4E39F2E2A07F000E71A9F /* LiveCh7PlayerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A4E39E2E2A07F000E71A9F /* LiveCh7PlayerCollectionViewCell.xib */; };
+		A8A4E3A12E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E3A02E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift */; };
+		A8A4E3A32E2A0BDC00E71A9F /* 7hd.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4E3A22E2A0BDB00E71A9F /* 7hd.m3u8 */; };
+		A8A4E3A52E2A100700E71A9F /* HD_1080p.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4E3A42E2A100600E71A9F /* HD_1080p.m3u8 */; };
+		A8A4E3A72E2A42B700E71A9F /* CarouselChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E3A62E2A42B700E71A9F /* CarouselChannelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4FDA5F34F65478629659A2DF /* Pods_BugabooTV7_BugabooTV7UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugabooTV7_BugabooTV7UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77D582679C7B743066A925A2 /* Pods-BugabooTV7Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7Tests.release.xcconfig"; path = "Target Support Files/Pods-BugabooTV7Tests/Pods-BugabooTV7Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A36E47C73AFE7740BA08191B /* Pods-BugabooTV7-BugabooTV7UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7-BugabooTV7UITests.debug.xcconfig"; path = "Target Support Files/Pods-BugabooTV7-BugabooTV7UITests/Pods-BugabooTV7-BugabooTV7UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugabooTV7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C79F986173562343C0BE7CB /* Pods-BugabooTV7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.debug.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.debug.xcconfig"; sourceTree = "<group>"; };
+		7E054FDB9E00F2EC614B7A8E /* Pods-BugabooTV7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.release.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.release.xcconfig"; sourceTree = "<group>"; };
+		A88B27172E2B4AE800029933 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		A88B271A2E2B4B0300029933 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		A88B271C2E2B4B2600029933 /* LiveChannelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsModel.swift; sourceTree = "<group>"; };
+		A88B271E2E2B4B4000029933 /* HighlightMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightMenuModel.swift; sourceTree = "<group>"; };
+		A88B27212E2B627000029933 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A88B27222E2B627000029933 /* WelcomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		A8A4E3552E2948D900E71A9F /* BugabooTV7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugabooTV7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A4E3582E2948D900E71A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8A4E35A2E2948D900E71A9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,12 +86,13 @@
 		A8A4E3982E29EEBE00E71A9F /* UIView + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extention.swift"; sourceTree = "<group>"; };
 		A8A4E39A2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTopCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8A4E39C2E29FF1100E71A9F /* categoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryModel.swift; sourceTree = "<group>"; };
-		BCF5FD5CBEE5471F1E42C9D3 /* Pods_BugabooTV7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugabooTV7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7C6E5C4DD9D0EAFDA5A77C9 /* Pods-BugabooTV7Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7Tests.debug.xcconfig"; path = "Target Support Files/Pods-BugabooTV7Tests/Pods-BugabooTV7Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C9871223A64107882E74908C /* Pods-BugabooTV7-BugabooTV7UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7-BugabooTV7UITests.release.xcconfig"; path = "Target Support Files/Pods-BugabooTV7-BugabooTV7UITests/Pods-BugabooTV7-BugabooTV7UITests.release.xcconfig"; sourceTree = "<group>"; };
-		D6BD265525B4211765DC1031 /* Pods_BugabooTV7Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugabooTV7Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9A1D78B665D0A61C7EF039D /* Pods-BugabooTV7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.release.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.release.xcconfig"; sourceTree = "<group>"; };
-		DA55DE8523A9A55CA5928BA6 /* Pods-BugabooTV7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.debug.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.debug.xcconfig"; sourceTree = "<group>"; };
+		A8A4E39E2E2A07F000E71A9F /* LiveCh7PlayerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCh7PlayerCollectionViewCell.xib; sourceTree = "<group>"; };
+		A8A4E3A02E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCh7PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		A8A4E3A22E2A0BDB00E71A9F /* 7hd.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 7hd.m3u8; sourceTree = "<group>"; };
+		A8A4E3A42E2A100600E71A9F /* HD_1080p.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HD_1080p.m3u8; sourceTree = "<group>"; };
+		A8A4E3A62E2A42B700E71A9F /* CarouselChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselChannelModel.swift; sourceTree = "<group>"; };
+		A8A4E3A82E2B41C900E71A9F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A4E3AC2E2B440B00E71A9F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8879206B1B85C6A7DF12C8AF /* Pods_BugabooTV7.framework in Frameworks */,
+				8657A3B4EDF3E5A108418A96 /* Pods_BugabooTV7.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E20B646BAD3669122BA2C0 /* Pods_BugabooTV7Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C276E99C7BBE080E2ACD46 /* Pods_BugabooTV7_BugabooTV7UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,14 +124,27 @@
 		2B80C9BD0001E0C15A3AA3E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DA55DE8523A9A55CA5928BA6 /* Pods-BugabooTV7.debug.xcconfig */,
-				D9A1D78B665D0A61C7EF039D /* Pods-BugabooTV7.release.xcconfig */,
-				A36E47C73AFE7740BA08191B /* Pods-BugabooTV7-BugabooTV7UITests.debug.xcconfig */,
-				C9871223A64107882E74908C /* Pods-BugabooTV7-BugabooTV7UITests.release.xcconfig */,
-				C7C6E5C4DD9D0EAFDA5A77C9 /* Pods-BugabooTV7Tests.debug.xcconfig */,
-				77D582679C7B743066A925A2 /* Pods-BugabooTV7Tests.release.xcconfig */,
+				6C79F986173562343C0BE7CB /* Pods-BugabooTV7.debug.xcconfig */,
+				7E054FDB9E00F2EC614B7A8E /* Pods-BugabooTV7.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A88B27162E2B4AD500029933 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A88B27172E2B4AE800029933 /* APIService.swift */,
+				A88B271A2E2B4B0300029933 /* APIEndpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A88B27202E2B5AEC00029933 /* UILayout */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4E3912E29EA9A00E71A9F /* AppLayouts.swift */,
+			);
+			path = UILayout;
 			sourceTree = "<group>";
 		};
 		A8A4E34C2E2948D900E71A9F = {
@@ -145,10 +172,11 @@
 		A8A4E3572E2948D900E71A9F /* BugabooTV7 */ = {
 			isa = PBXGroup;
 			children = (
+				A88B27162E2B4AD500029933 /* Network */,
+				A8A4E3892E29E55A00E71A9F /* Model */,
 				A8A4E3972E29EEAC00E71A9F /* Extentions */,
 				A8A4E3932E29EAE300E71A9F /* View */,
 				A8A4E38C2E29E84700E71A9F /* Cell */,
-				A8A4E3892E29E55A00E71A9F /* Model */,
 				A8A4E3882E2984B800E71A9F /* Utility */,
 				A8A4E3582E2948D900E71A9F /* AppDelegate.swift */,
 				A8A4E35A2E2948D900E71A9F /* SceneDelegate.swift */,
@@ -156,6 +184,8 @@
 				A8A4E35E2E2948D900E71A9F /* Main.storyboard */,
 				A8A4E3612E2948DC00E71A9F /* Assets.xcassets */,
 				A8A4E3632E2948DC00E71A9F /* LaunchScreen.storyboard */,
+				A8A4E3A22E2A0BDB00E71A9F /* 7hd.m3u8 */,
+				A8A4E3A42E2A100600E71A9F /* HD_1080p.m3u8 */,
 				A8A4E3662E2948DC00E71A9F /* Info.plist */,
 			);
 			path = BugabooTV7;
@@ -188,10 +218,13 @@
 		A8A4E3892E29E55A00E71A9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A88B27202E2B5AEC00029933 /* UILayout */,
 				A8A4E38A2E29E59900E71A9F /* TopbannerModel.swift */,
+				A8A4E3A62E2A42B700E71A9F /* CarouselChannelModel.swift */,
 				A8A4E38F2E29E8C700E71A9F /* VerticalModel.swift */,
-				A8A4E3912E29EA9A00E71A9F /* AppLayouts.swift */,
 				A8A4E39C2E29FF1100E71A9F /* categoryModel.swift */,
+				A88B271C2E2B4B2600029933 /* LiveChannelsModel.swift */,
+				A88B271E2E2B4B4000029933 /* HighlightMenuModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +234,10 @@
 			children = (
 				A8A4E38D2E29E87F00E71A9F /* VerticalCollectionViewCell.swift */,
 				A8A4E39A2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift */,
+				A8A4E39E2E2A07F000E71A9F /* LiveCh7PlayerCollectionViewCell.xib */,
+				A8A4E3A02E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift */,
+				A88B27212E2B627000029933 /* WelcomeCollectionViewCell.swift */,
+				A88B27222E2B627000029933 /* WelcomeCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -232,9 +269,9 @@
 		C9E39A8C684A1948CE60A627 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BCF5FD5CBEE5471F1E42C9D3 /* Pods_BugabooTV7.framework */,
-				4FDA5F34F65478629659A2DF /* Pods_BugabooTV7_BugabooTV7UITests.framework */,
-				D6BD265525B4211765DC1031 /* Pods_BugabooTV7Tests.framework */,
+				A8A4E3AC2E2B440B00E71A9F /* Alamofire.framework */,
+				A8A4E3A82E2B41C900E71A9F /* Alamofire.framework */,
+				2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -246,10 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A4E37F2E2948DD00E71A9F /* Build configuration list for PBXNativeTarget "BugabooTV7" */;
 			buildPhases = (
-				E1D32B6396E0942D634F6459 /* [CP] Check Pods Manifest.lock */,
+				A87908B4BA82AD85E48A7467 /* [CP] Check Pods Manifest.lock */,
 				A8A4E3512E2948D900E71A9F /* Sources */,
 				A8A4E3522E2948D900E71A9F /* Frameworks */,
 				A8A4E3532E2948D900E71A9F /* Resources */,
+				97B211068A7F11979AB9A9FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,7 +302,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A4E3822E2948DD00E71A9F /* Build configuration list for PBXNativeTarget "BugabooTV7Tests" */;
 			buildPhases = (
-				0D75EFD50CF1BC5315BA718D /* [CP] Check Pods Manifest.lock */,
 				A8A4E3672E2948DD00E71A9F /* Sources */,
 				A8A4E3682E2948DD00E71A9F /* Frameworks */,
 				A8A4E3692E2948DD00E71A9F /* Resources */,
@@ -283,7 +320,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8A4E3852E2948DD00E71A9F /* Build configuration list for PBXNativeTarget "BugabooTV7UITests" */;
 			buildPhases = (
-				5213D1F65A7550711816C455 /* [CP] Check Pods Manifest.lock */,
 				A8A4E3712E2948DD00E71A9F /* Sources */,
 				A8A4E3722E2948DD00E71A9F /* Frameworks */,
 				A8A4E3732E2948DD00E71A9F /* Resources */,
@@ -347,7 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A4E3652E2948DC00E71A9F /* LaunchScreen.storyboard in Resources */,
+				A8A4E3A32E2A0BDC00E71A9F /* 7hd.m3u8 in Resources */,
 				A8A4E3622E2948DC00E71A9F /* Assets.xcassets in Resources */,
+				A8A4E39F2E2A07F000E71A9F /* LiveCh7PlayerCollectionViewCell.xib in Resources */,
+				A88B27242E2B627000029933 /* WelcomeCollectionViewCell.xib in Resources */,
+				A8A4E3A52E2A100700E71A9F /* HD_1080p.m3u8 in Resources */,
 				A8A4E3602E2948D900E71A9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,51 +409,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D75EFD50CF1BC5315BA718D /* [CP] Check Pods Manifest.lock */ = {
+		97B211068A7F11979AB9A9FD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BugabooTV7Tests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5213D1F65A7550711816C455 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BugabooTV7-BugabooTV7UITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1D32B6396E0942D634F6459 /* [CP] Check Pods Manifest.lock */ = {
+		A87908B4BA82AD85E48A7467 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -443,16 +456,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A4E35D2E2948D900E71A9F /* ViewController.swift in Sources */,
+				A88B27232E2B627000029933 /* WelcomeCollectionViewCell.swift in Sources */,
+				A88B271F2E2B4B4000029933 /* HighlightMenuModel.swift in Sources */,
 				A8A4E3902E29E8C700E71A9F /* VerticalModel.swift in Sources */,
+				A8A4E3A12E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift in Sources */,
 				A8A4E38B2E29E59900E71A9F /* TopbannerModel.swift in Sources */,
+				A88B271B2E2B4B0300029933 /* APIEndpoint.swift in Sources */,
 				A8A4E39B2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift in Sources */,
 				A8A4E38E2E29E87F00E71A9F /* VerticalCollectionViewCell.swift in Sources */,
+				A8A4E3A72E2A42B700E71A9F /* CarouselChannelModel.swift in Sources */,
 				A8A4E3992E29EEBE00E71A9F /* UIView + Extention.swift in Sources */,
+				A88B27182E2B4AE800029933 /* APIService.swift in Sources */,
 				A8A4E3592E2948D900E71A9F /* AppDelegate.swift in Sources */,
 				A8A4E35B2E2948D900E71A9F /* SceneDelegate.swift in Sources */,
 				A8A4E39D2E29FF1100E71A9F /* categoryModel.swift in Sources */,
 				A8A4E3962E29EB2400E71A9F /* SectionDecorationView.swift in Sources */,
 				A8A4E3922E29EA9A00E71A9F /* AppLayouts.swift in Sources */,
+				A88B271D2E2B4B2600029933 /* LiveChannelsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -617,7 +637,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -629,16 +649,18 @@
 		};
 		A8A4E3802E2948DD00E71A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA55DE8523A9A55CA5928BA6 /* Pods-BugabooTV7.debug.xcconfig */;
+			baseConfigurationReference = 6C79F986173562343C0BE7CB /* Pods-BugabooTV7.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S57Y2568RA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BugabooTV7/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BUGABOO.TV7;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -646,7 +668,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,16 +684,18 @@
 		};
 		A8A4E3812E2948DD00E71A9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9A1D78B665D0A61C7EF039D /* Pods-BugabooTV7.release.xcconfig */;
+			baseConfigurationReference = 7E054FDB9E00F2EC614B7A8E /* Pods-BugabooTV7.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S57Y2568RA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BugabooTV7/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BUGABOO.TV7;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -679,7 +703,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,7 +719,6 @@
 		};
 		A8A4E3832E2948DD00E71A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7C6E5C4DD9D0EAFDA5A77C9 /* Pods-BugabooTV7Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -703,7 +726,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S57Y2568RA;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bbtv7.main.BugabooTV7Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,7 +739,6 @@
 		};
 		A8A4E3842E2948DD00E71A9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77D582679C7B743066A925A2 /* Pods-BugabooTV7Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -724,7 +746,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S57Y2568RA;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bbtv7.main.BugabooTV7Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -737,7 +759,6 @@
 		};
 		A8A4E3862E2948DD00E71A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A36E47C73AFE7740BA08191B /* Pods-BugabooTV7-BugabooTV7UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -756,7 +777,6 @@
 		};
 		A8A4E3872E2948DD00E71A9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9871223A64107882E74908C /* Pods-BugabooTV7-BugabooTV7UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LiveCh7PlayerCollectionViewCell" id="UOG-kA-jqf" customClass="LiveCh7PlayerCollectionViewCell" customModule="BugabooTV7" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="178"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5F2-14-zEm">
+                <rect key="frame" x="0.0" y="0.0" width="307" height="178"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOe-ns-XxC">
+                        <rect key="frame" x="0.0" y="0.0" width="307" height="178"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_TVMockUp" translatesAutoresizingMaskIntoConstraints="NO" id="1p5-Xe-yEI">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="178"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1p5-Xe-yEI" secondAttribute="trailing" id="fDy-s4-EsI"/>
+                            <constraint firstAttribute="bottom" secondItem="1p5-Xe-yEI" secondAttribute="bottom" id="ocd-kt-OxJ"/>
+                            <constraint firstItem="1p5-Xe-yEI" firstAttribute="leading" secondItem="uOe-ns-XxC" secondAttribute="leading" id="pyb-zI-19y"/>
+                            <constraint firstItem="1p5-Xe-yEI" firstAttribute="top" secondItem="uOe-ns-XxC" secondAttribute="top" id="wvh-dI-DtR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uOe-ns-XxC" firstAttribute="leading" secondItem="5F2-14-zEm" secondAttribute="leading" id="9Ey-Df-XWb"/>
+                    <constraint firstAttribute="bottom" secondItem="uOe-ns-XxC" secondAttribute="bottom" id="De0-FO-7d4"/>
+                    <constraint firstAttribute="trailing" secondItem="uOe-ns-XxC" secondAttribute="trailing" id="n8w-te-8xH"/>
+                    <constraint firstItem="uOe-ns-XxC" firstAttribute="top" secondItem="5F2-14-zEm" secondAttribute="top" id="zec-rY-RN1"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="307" height="178"/>
+            <connections>
+                <outlet property="imageView" destination="1p5-Xe-yEI" id="su8-ud-0Ne"/>
+            </connections>
+            <point key="canvasLocation" x="335.1145038167939" y="65.492957746478879"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_TVMockUp" width="1284" height="722"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

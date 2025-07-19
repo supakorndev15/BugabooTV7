@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g96-Vk-hPp">
-                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="660"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mue-et-H6L">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -50,7 +50,7 @@
                         <constraints>
                             <constraint firstItem="g96-Vk-hPp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DYs-Ql-xOF"/>
                             <constraint firstItem="qct-41-NwD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IrI-5t-gqm"/>
-                            <constraint firstItem="g96-Vk-hPp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Qec-IS-ppC"/>
+                            <constraint firstItem="g96-Vk-hPp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Qec-IS-ppC"/>
                             <constraint firstItem="qct-41-NwD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ypw-Vo-Rel"/>
                             <constraint firstItem="g96-Vk-hPp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oih-FE-qk4"/>
                             <constraint firstItem="qct-41-NwD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tCi-Kf-P7q"/>

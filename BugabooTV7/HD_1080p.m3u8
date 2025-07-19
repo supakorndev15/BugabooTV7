@@ -1,0 +1,16 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-MEDIA-SEQUENCE:314034
+#EXT-X-TARGETDURATION:4
+#EXT-X-PROGRAM-DATE-TIME:2025-07-18T13:15:25.557+08:00
+#EXT-X-KEY:METHOD=AES-128,URI="https://ch7-key-hwc.bugaboo.tv/get_hls_enc_key?key_id=4c8dd18fcc504811a952a8f83a1ceef3",IV=0x00000000000000000000019818A2BEF8
+#EXTINF:4.000,
+HD_1080p_1752815725557_4110817546_314034.ts?ps=1&app=livech7hd&stream=HD_1080p&vhost=streaming-hwc.ch7.com&x_push_domain=ingest-hwc.ch7.com
+#EXT-X-PROGRAM-DATE-TIME:2025-07-18T13:15:29.537+08:00
+#EXT-X-KEY:METHOD=AES-128,URI="https://ch7-key-hwc.bugaboo.tv/get_hls_enc_key?key_id=4c8dd18fcc504811a952a8f83a1ceef3",IV=0x00000000000000000000019818A2BEF8
+#EXTINF:4.000,
+HD_1080p_1752815729537_4110817546_314035.ts?ps=1&app=livech7hd&stream=HD_1080p&vhost=streaming-hwc.ch7.com&x_push_domain=ingest-hwc.ch7.com
+#EXT-X-PROGRAM-DATE-TIME:2025-07-18T13:15:33.529+08:00
+#EXT-X-KEY:METHOD=AES-128,URI="https://ch7-key-hwc.bugaboo.tv/get_hls_enc_key?key_id=4c8dd18fcc504811a952a8f83a1ceef3",IV=0x00000000000000000000019818A2BEF8
+#EXTINF:4.000,
+HD_1080p_1752815733529_4110817546_314036.ts?ps=1&app=livech7hd&stream=HD_1080p&vhost=streaming-hwc.ch7.com&x_push_domain=ingest-hwc.ch7.com

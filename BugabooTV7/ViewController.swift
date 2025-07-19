@@ -18,8 +18,14 @@ class ViewController: UIViewController {
     // สร้าง UI collectionView
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var liveChannels: [Channel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // fetchData
+        fetchLiveChannels()
+        
         cellRegister()
         configureUI()
         setupCustomNavBar()
@@ -35,6 +41,8 @@ class ViewController: UIViewController {
     func cellRegister() {
         collectionView.register(VerticalCollectionViewCell.self, forCellWithReuseIdentifier: VerticalCollectionViewCell.cellIdentifier)
         collectionView.register(MiniTopCategoryCollectionViewCell.self, forCellWithReuseIdentifier: MiniTopCategoryCollectionViewCell.cellIdentifier)
+        collectionView.register(UINib(nibName: "LiveCh7PlayerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: LiveCh7PlayerCollectionViewCell.cellIdentifier)
+
     }
     
     func configureUI(){
@@ -169,11 +177,12 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         let layout = UICollectionViewCompositionalLayout {sectionIndex,enviroment in
             switch sectionIndex {
             case 0 :
-                return AppLayouts.shared.foodBannerSection()
+                return AppLayouts.shared.livePlayerSection()
+//                return AppLayouts.shared.foodBannerSection()
             case 1 :
-                return AppLayouts.shared.foodCategorySection()
+                return AppLayouts.shared.liveSection()
             case 2 :
-                return AppLayouts.shared.foodBannerSection()
+                return AppLayouts.shared.foodCategorySection()
             default:
                 return AppLayouts.shared.restaurantsListSection()
             }
@@ -185,11 +194,11 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0 :
-            return topBannerMockData.count
+            return 1 //topBannerMockData.count
         case 1 :
-            return foodCategoryMockData.count
+            return max(carouselChannelMockData.count, 4) //carouselChannelMockData.count
         case 2 :
-            return verticalMockData.count
+            return foodCategoryMockData.count
         default:
             return topBannerMockData.count
         }
@@ -202,15 +211,31 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
 
+            // LiveCh7PlayerCollectionViewCell
         case 0 :
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}
-             cell.cellData = verticalMockData[indexPath.row]
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LiveCh7PlayerCollectionViewCell.cellIdentifier, for: indexPath) as? LiveCh7PlayerCollectionViewCell else {fatalError("Unable deque cell...")}
+//             cell.cellData = foodCategoryMockData[indexPath.row]
              return cell
         case 1 :
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiniTopCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? MiniTopCategoryCollectionViewCell else {fatalError("Unable deque cell...")}
+
+            cell.isHidden = indexPath.row >= carouselChannelMockData.count
+            cell.cellData = cell.isHidden ? nil : carouselChannelMockData[indexPath.row]
+
+//            if indexPath.row < carouselChannelMockData.count {
+//                cell.cellData = carouselChannelMockData[indexPath.row]
+//                cell.isHidden = false
+//            } else {
+//                cell.cellData = nil // หรือทำเป็น empty
+//                cell.isHidden = true // ซ่อน cell ปลอม
+//            }
+
+             return cell
+        case 2 :
             
            // MiniTopCategoryCollectionViewCell
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiniTopCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? MiniTopCategoryCollectionViewCell else {fatalError("Unable deque cell...")}
-             cell.cellData = foodCategoryMockData[indexPath.row]
+//             cell.cellData = foodCategoryMockData[indexPath.row]
              return cell
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}
@@ -231,3 +256,29 @@ extension UIImage {
     }
 }
 
+
+extension ViewController {
+    func fetchLiveChannels() {
+        APIService.shared.request(endpoint: .liveChannels) { (result: Result<LiveChannelsModel, Error>) in
+            switch result {
+            case .success(let data):
+                print("✅ Channels count: \(data.data.channels.count)")
+                for (index, channel) in data.data.channels.enumerated() {
+                    print("📺 Channel \(index):")
+                    print("🖼️ Images: \(channel.images)\n")
+                    print("🖼️ Images: \(channel.images.portrait.medium)\n")
+                }
+                
+                self.liveChannels = data.data.channels
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+
+                print(data.data)
+                data.data.channels.forEach { print($0.channelName) }
+            case .failure(let error):
+                print("❌ Error: \(error.localizedDescription)")
+            }
+        }
+    }
+}

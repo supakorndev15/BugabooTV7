@@ -10,18 +10,15 @@ import UIKit
 import AVKit
 
 class MiniTopCategoryCollectionViewCell: UICollectionViewCell {
-    
-    //MARK: Properities
-    
     static let cellIdentifier = "MiniTopCategoryCollectionViewCell"
     
-    var cellData : FoodCategoryModel? {
+    var cellData : CarouselChannelModel? {
         didSet {
             guard let cellData = cellData else {
                 return
             }
-            categoryImgView.image = UIImage(named: cellData.categoryImage)
-            categoryLabel.text = cellData.categoryName
+            categoryImgView.image = UIImage(named: cellData.imageName)
+            categoryLabel.text = cellData.name
         }
     }
     
@@ -29,7 +26,7 @@ class MiniTopCategoryCollectionViewCell: UICollectionViewCell {
         let catImg = UIImageView()
         
         catImg.translatesAutoresizingMaskIntoConstraints = false
-        catImg.contentMode = .scaleAspectFit // .scaleAspectFill
+        catImg.contentMode = .scaleAspectFit
         catImg.clipsToBounds = true
         catImg.layer.cornerRadius = 3
         
@@ -53,9 +50,10 @@ class MiniTopCategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(){
+        
         self.backgroundColor = .clear
         addSubview(categoryImgView)
-        addSubview(categoryLabel)
+//        addSubview(categoryLabel)
     }
     
     func configureConstrains(){
@@ -63,14 +61,7 @@ class MiniTopCategoryCollectionViewCell: UICollectionViewCell {
             categoryImgView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             categoryImgView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             categoryImgView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
-            
-            categoryImgView.heightAnchor.constraint(equalToConstant: 60),
-            
-            categoryLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 3),
-            categoryLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3),
-            categoryLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 3),
-            categoryLabel.topAnchor.constraint(equalTo: categoryImgView.bottomAnchor, constant: 5),
-            
+            categoryImgView.heightAnchor.constraint(equalToConstant: 80),
         ])
     }
     
