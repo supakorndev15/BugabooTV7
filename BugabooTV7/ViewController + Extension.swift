@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-  
+    
     func cellRegister() {
         collectionView.register(VerticalCollectionViewCell.self, forCellWithReuseIdentifier: VerticalCollectionViewCell.cellIdentifier)
         collectionView.register(MiniTopCategoryCollectionViewCell.self, forCellWithReuseIdentifier: MiniTopCategoryCollectionViewCell.cellIdentifier)
@@ -18,6 +18,8 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         collectionView.register(UINib(nibName: "TopHighlightCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: TopHighlightCollectionViewCell.cellIdentifier)
         collectionView.register(UINib(nibName: "CatListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CatListCollectionViewCell.cellIdentifier)
         collectionView.register(UINib(nibName: "defaultVerticalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: defaultVerticalCollectionViewCell.cellIdentifier)
+        collectionView.register(UINib(nibName: "defaultHorizontalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: defaultHorizontalCollectionViewCell.cellIdentifier)
+        
         // Header
         collectionView.register(
             SectionHeaderViewReusableView.self,
@@ -34,24 +36,25 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         guard kind == UICollectionView.elementKindSectionHeader else {
             return UICollectionReusableView()
         }
-
+        
         let header = collectionView.dequeueReusableSupplementaryView(
             ofKind: kind,
             withReuseIdentifier: SectionHeaderViewReusableView.reuseIdentifier,
             for: indexPath
         ) as! SectionHeaderViewReusableView
-
+        
         // ถ้ามี Data ต้อง Chceck if
         switch indexPath.section {
         case 5:
+            header.configure(text: "วอลเลย์บอล นักเรียนหญิง แชมป์กีฬา 7HD 2025")
+        case 6:
             header.configure(text: "ละครช่อง 7HD")
         default:
-            header.configure(text: "✨ รายการอื่น ๆ")
+            header.configure(text: "✨ รายการวาไรตี้ หลากหลายรูปแบบ")
         }
-
+        
         return header
     }
-
     
     // configureCompositionalLayout
     func configureCompositionalLayout(){
@@ -68,9 +71,9 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             case 4 :
                 return AppLayouts.shared.catCategorySection()
             case 5 :
-                return AppLayouts.shared.verticalDefaultSectionLayout()
+                return AppLayouts.shared.horizontalDefaultSectionLayout()
             case 6 :
-                return AppLayouts.shared.defaultSectionLayout()
+                return AppLayouts.shared.verticalDefaultSectionLayout()
             default:
                 return AppLayouts.shared.defaultSectionLayout()
             }
@@ -92,9 +95,9 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         case 4 :
             return foodCategoryMockData.count
         case 5 :
-            return foodCategoryMockData.count
+            return horizontalMockData.count
         case 6 :
-            return foodCategoryMockData.count
+            return verticalMockData.count
         default:
             return topBannerMockData.count
         }
@@ -108,39 +111,45 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
-
+            
         case 0 :
-            // Check call data
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LiveCh7PlayerCollectionViewCell.cellIdentifier, for: indexPath) as? LiveCh7PlayerCollectionViewCell else {fatalError("Unable deque cell...")}
+            return cell
+        case 1 :
+            // Check data
             if let channel = viewModel.channel(at: indexPath.row) {
                 print("✅ Channel:", channel)
             } else {
                 print("⚠️ Invalid index \(indexPath.row)")
-//                cell.isHidden = true
+                //                cell.isHidden = true
             }
-
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LiveCh7PlayerCollectionViewCell.cellIdentifier, for: indexPath) as? LiveCh7PlayerCollectionViewCell else {fatalError("Unable deque cell...")}
-             return cell
-        case 1 :
+            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiniTopCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? MiniTopCategoryCollectionViewCell else {fatalError("Unable deque cell...")}
-
+            
             cell.isHidden = indexPath.row >= carouselChannelMockData.count
             cell.cellData = cell.isHidden ? nil : carouselChannelMockData[indexPath.row]
-
+            
             return cell
         case 2 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WelcomeCollectionViewCell.cellIdentifier, for: indexPath) as? WelcomeCollectionViewCell else {fatalError("Unable deque cell...")}
-             return cell
+            return cell
         case 3 :
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopHighlightCollectionViewCell.cellIdentifier, for: indexPath) as? TopHighlightCollectionViewCell else {fatalError("Unable deque cell...")}
             print("")
-             return cell
+            return cell
         case 4 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatListCollectionViewCell.cellIdentifier, for: indexPath) as? CatListCollectionViewCell else {fatalError("Unable deque cell...")}
             cell.cellData = foodCategoryMockData[indexPath.row]
             return cell
-        
+            
         case 5 :
+            
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: defaultHorizontalCollectionViewCell.cellIdentifier, for: indexPath) as? defaultHorizontalCollectionViewCell else {fatalError("Unable deque cell...")}
+            let cellVM = horizontalListViewModel.viewModel(at: indexPath.row)
+            cell.configure(with: cellVM)
+            return cell
+        case 6 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: defaultVerticalCollectionViewCell.cellIdentifier, for: indexPath) as? defaultVerticalCollectionViewCell else {fatalError("Unable deque cell...")}
             
             let cellVM = verticalListViewModel.viewModel(at: indexPath.row)
@@ -149,14 +158,13 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         default:
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}
-             cell.cellData = verticalMockData[indexPath.row]
-             return cell
+            cell.cellData = verticalMockData[indexPath.row]
+            return cell
         }
     }
 }
 
 extension ViewController {
-    // Example
     func fetchData() {
         viewModel.fetchLiveChannels {
             DispatchQueue.main.async {

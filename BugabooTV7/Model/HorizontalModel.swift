@@ -1,6 +1,6 @@
 import Foundation
 
-struct VerticalModel {
+struct HorizontalModel {
     let coverImage: String
     let name: String
     let categoryTags: String

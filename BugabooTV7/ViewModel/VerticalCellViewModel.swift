@@ -7,7 +7,6 @@
 
 import Foundation
 
-// Logic
 struct VerticalCellViewModel {
     let imageName: String
     let title: String

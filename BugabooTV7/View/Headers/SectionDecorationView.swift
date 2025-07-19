@@ -24,8 +24,8 @@ class SectionDecorationView: UICollectionReusableView {
     // MARK: FUNCTIONS -
     
     func setUpViews(){
-        self.backgroundColor = .lightGray.withAlphaComponent(0.2)
-        layer.cornerRadius = 20
+        self.backgroundColor = .blue.withAlphaComponent(0.2)
+        layer.cornerRadius = 1
     }
     
 }

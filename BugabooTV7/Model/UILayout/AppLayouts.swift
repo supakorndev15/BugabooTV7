@@ -43,18 +43,6 @@ class AppLayouts {
         section.interGroupSpacing = 10
         section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
         
-//        // ✅ กำหนด header
-//        let headerSize = NSCollectionLayoutSize(
-//            widthDimension: .fractionalWidth(1.0),
-//            heightDimension: .absolute(40)
-//        )
-//        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-//            layoutSize: headerSize,
-//            elementKind: UICollectionView.elementKindSectionHeader,
-//            alignment: .top
-//        )
-//        section.boundarySupplementaryItems = [sectionHeader]
-        
         return section
     }
 
@@ -169,7 +157,7 @@ class AppLayouts {
         let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
         section.decorationItems = [decorationItem]
         
-        // กำหนด header
+        /// กำหนด header
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .absolute(40)
@@ -184,8 +172,7 @@ class AppLayouts {
         return section
     }
     
-    // 
-    func verticalDefaultSectionLayout() -> NSCollectionLayoutSection {
+    func horizontalDefaultSectionLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(150), heightDimension: .absolute(250))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
@@ -196,10 +183,7 @@ class AppLayouts {
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         section.interGroupSpacing = 5
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
-//        
-//        let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
-//        section.decorationItems = [decorationItem]
-//        
+ 
         // กำหนด header
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
@@ -211,7 +195,31 @@ class AppLayouts {
             alignment: .top
         )
         section.boundarySupplementaryItems = [sectionHeader]
+        return section
+    }
+    
+    func verticalDefaultSectionLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(250), heightDimension: .absolute(160))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(250), heightDimension: .absolute(160))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        section.interGroupSpacing = 10
+        section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
+        
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(40)
+        )
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        section.boundarySupplementaryItems = [sectionHeader]
         return section
     }
 }
