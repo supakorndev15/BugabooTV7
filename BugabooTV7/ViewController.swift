@@ -20,7 +20,8 @@ class ViewController: UIViewController {
 
     var liveChannels: [Channel] = []
     let viewModel = HomeViewModel()
-    
+    let verticalListViewModel = VerticalListViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .clear

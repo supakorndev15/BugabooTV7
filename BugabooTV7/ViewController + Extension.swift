@@ -142,9 +142,10 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         
         case 5 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: defaultVerticalCollectionViewCell.cellIdentifier, for: indexPath) as? defaultVerticalCollectionViewCell else {fatalError("Unable deque cell...")}
-            cell.cellData = verticalMockData[indexPath.row]
+            
+            let cellVM = verticalListViewModel.viewModel(at: indexPath.row)
+            cell.configure(with: cellVM)
             return cell
-            //defaultVerticalCollectionViewCell
         default:
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}

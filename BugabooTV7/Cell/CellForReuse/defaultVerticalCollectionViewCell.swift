@@ -8,27 +8,17 @@
 import UIKit
 
 class defaultVerticalCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var dateTitleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var imgImageView: UIImageView!
     
     static let cellIdentifier = "defaultVerticalCollectionViewCell"
     
-    var cellData : VerticalModel? {
-        didSet {
-            guard let cellData = cellData else {
-                return
-            }
-            imgImageView.image = UIImage(named: cellData.coverImage)
-            dateTitleLabel.text = "18 กค. 68"//cellData.name
-            subTitleLabel.text = cellData.name
-        }
+    func configure(with viewModel: VerticalCellViewModel) {
+        imgImageView.image = UIImage(named: viewModel.imageName)
+        dateTitleLabel.text = viewModel.dateText
+        subTitleLabel.text = viewModel.title
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
 }
+
