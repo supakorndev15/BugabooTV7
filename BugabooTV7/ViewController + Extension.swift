@@ -75,7 +75,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             case 6 :
                 return AppLayouts.shared.verticalDefaultSectionLayout()
             default:
-                return AppLayouts.shared.defaultSectionLayout()
+                return AppLayouts.shared.horizontalDefaultSectionLayout()
             }
         }
         layout.register(SectionDecorationView.self, forDecorationViewOfKind: "SectionBackground")
@@ -99,7 +99,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         case 6 :
             return verticalMockData.count
         default:
-            return topBannerMockData.count
+            return horizontalMockData.count
         }
         // ถ้า API อื่นๆ ต้อง ฉCheck action
     }
@@ -158,7 +158,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         default:
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}
-            cell.cellData = verticalMockData[indexPath.row]
+            cell.cellData = horizontalMockData[indexPath.row]
             return cell
         }
     }

@@ -13,12 +13,12 @@ class VerticalCollectionViewCell: UICollectionViewCell {
     // MARK: PROPERTIES -
     static let cellIdentifier = "VerticalCollectionViewCell"
     
-    var cellData: VerticalModel? {
+    var cellData: HorizontalModel? {
         didSet {
             guard let cellData = cellData else { return }
             restaurantImage.image = UIImage(named: cellData.coverImage)
             title.text = cellData.name
-            subtitle.text = cellData.categoryTags
+//            subtitle.text = cellData.categoryTags
         }
     }
     
@@ -48,16 +48,16 @@ class VerticalCollectionViewCell: UICollectionViewCell {
         return v
     }()
     
-    let subtitle: UILabel = {
-        let l = UILabel()
-        l.translatesAutoresizingMaskIntoConstraints = false
-        l.text = "North India, Punjabi"
-        l.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        l.textColor = .gray
-        l.textAlignment = .center
-        l.numberOfLines = 0
-        return l
-    }()
+//    let subtitle: UILabel = {
+//        let l = UILabel()
+//        l.translatesAutoresizingMaskIntoConstraints = false
+//        l.text = "North India, Punjabi"
+//        l.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+//        l.textColor = .gray
+//        l.textAlignment = .center
+//        l.numberOfLines = 0
+//        return l
+//    }()
     
     // MARK: MAIN -
     
@@ -77,7 +77,7 @@ class VerticalCollectionViewCell: UICollectionViewCell {
         addSubview(restaurantImage)
         addSubview(title)
         addSubview(dividerView)
-        addSubview(subtitle)
+//        addSubview(subtitle)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             print(self.frame.size.width)
         }
@@ -99,11 +99,11 @@ class VerticalCollectionViewCell: UICollectionViewCell {
             dividerView.widthAnchor.constraint(equalToConstant: 30),
             dividerView.heightAnchor.constraint(equalToConstant: 1),
             dividerView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 25),
-            
-            subtitle.topAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: 15),
-            subtitle.centerXAnchor.constraint(equalTo: centerXAnchor),
-            subtitle.leadingAnchor.constraint(equalTo: leadingAnchor),
-            subtitle.trailingAnchor.constraint(equalTo: trailingAnchor)
+//            
+//            subtitle.topAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: 15),
+//            subtitle.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            subtitle.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            subtitle.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
     
