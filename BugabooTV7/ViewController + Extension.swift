@@ -110,6 +110,14 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         switch indexPath.section {
 
         case 0 :
+            // Check call data
+            if let channel = viewModel.channel(at: indexPath.row) {
+                print("✅ Channel:", channel)
+            } else {
+                print("⚠️ Invalid index \(indexPath.row)")
+//                cell.isHidden = true
+            }
+
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LiveCh7PlayerCollectionViewCell.cellIdentifier, for: indexPath) as? LiveCh7PlayerCollectionViewCell else {fatalError("Unable deque cell...")}
              return cell
         case 1 :
@@ -148,26 +156,10 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
 
 extension ViewController {
     // Example
-    func fetchLiveChannels() {
-        APIService.shared.request(endpoint: .liveChannels) { (result: Result<LiveChannelsModel, Error>) in
-            switch result {
-            case .success(let data):
-                print("✅ Channels count: \(data.data.channels.count)")
-                for (index, channel) in data.data.channels.enumerated() {
-                    print("📺 Channel \(index):")
-                    print("🖼️ Images: \(channel.images)\n")
-                    print("🖼️ Images: \(channel.images.portrait.medium)\n")
-                }
-                
-                self.liveChannels = data.data.channels
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-
-                print(data.data)
-                data.data.channels.forEach { print($0.channelName) }
-            case .failure(let error):
-                print("❌ Error: \(error.localizedDescription)")
+    func fetchData() {
+        viewModel.fetchLiveChannels {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
             }
         }
     }

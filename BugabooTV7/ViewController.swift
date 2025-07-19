@@ -19,13 +19,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var liveChannels: [Channel] = []
+    let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .clear
         // fetchData
+        fetchData() // ยังไม่ได้เรียก เส้นอื่นๆ 
+        
         setupCustomNavBar()
-        fetchLiveChannels()
         cellRegister()
         configureCompositionalLayout()
     }

@@ -21,6 +21,10 @@ class LiveCh7PlayerCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    func configure(with viewModel: Channel) {
+//        imageView.loadImage(from: viewModel.imageUrl)
+    }
+    
 //    private var player: AVPlayer?
 //    private var playerLayer: AVPlayerLayer?
 //    
