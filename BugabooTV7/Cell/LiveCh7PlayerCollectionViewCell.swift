@@ -34,8 +34,10 @@ class LiveCh7PlayerCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         setupPlayer()
     }
-    
+
     private func setupPlayer() {
+        // https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4
+        
         guard let videoURL = URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4") else {
             print("Invalid video URL")
             return
@@ -58,8 +60,25 @@ class LiveCh7PlayerCollectionViewCell: UICollectionViewCell {
         playerViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         // เล่นวิดีโอทันที
-        queuePlayer?.play()
+        playVideo()
+
     }
+    
+    func playVideo() {
+        queuePlayer?.play()
+        queuePlayer?.isMuted = false
+        print("PLAY VDO")
+    }
+
+    func stopVideo() {
+        print("🛑 STOP called")
+        queuePlayer?.pause()
+        queuePlayer?.removeAllItems()
+        playerLooper = nil
+        queuePlayer = nil
+    }
+
+
     func configure(with viewModel: Channel) {
         //        imageView.loadImage(from: viewModel.imageUrl)
     }

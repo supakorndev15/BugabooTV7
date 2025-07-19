@@ -74,6 +74,8 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
                 return AppLayouts.shared.horizontalDefaultSectionLayout()
             case 6 :
                 return AppLayouts.shared.verticalDefaultSectionLayout()
+            case 7 :
+                return AppLayouts.shared.defaultSectionLayout()
             default:
                 return AppLayouts.shared.horizontalDefaultSectionLayout()
             }
@@ -90,7 +92,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             return max(carouselChannelMockData.count, 4)
         case 2 :
             return 1
-        case 3 :
+        case 3,7 :
             return 10
         case 4 :
             return foodCategoryMockData.count
@@ -155,11 +157,23 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             let cellVM = verticalListViewModel.viewModel(at: indexPath.row)
             cell.configure(with: cellVM)
             return cell
-        default:
+        case 7 :
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: defaultVerticalCollectionViewCell.cellIdentifier, for: indexPath) as? defaultVerticalCollectionViewCell else {fatalError("Unable deque cell...")}
             
+            let cellVM = verticalListViewModel.viewModel(at: indexPath.row)
+            cell.configure(with: cellVM)
+            return cell
+        default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}
             cell.cellData = horizontalMockData[indexPath.row]
             return cell
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.section == 3, let videoCell = cell as? LiveCh7PlayerCollectionViewCell {
+            print("⛔️ stopVideo called on index \(indexPath.row)")
+            videoCell.stopVideo()
         }
     }
 }
