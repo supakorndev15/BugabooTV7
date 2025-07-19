@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
@@ -126,7 +127,9 @@ class ViewController: UIViewController {
     @objc func iconTapped(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            print("Icon 1 tapped")
+            showConfirmationAlert(title: "ยืนยัน", message: "พบปัญหาสามารถแจ้งได้ \nคุณต้องการช่วยเหลือหรือไม่?") {
+                print("Help")
+            }
         case 1:
             let urlString = "https://shop.bugaboo.tv/"
             if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
@@ -137,15 +140,6 @@ class ViewController: UIViewController {
             print("Icon 3 tapped")
         default:
             break
-        }
-    }
-}
-
-extension UIImage {
-    func resized(to size: CGSize) -> UIImage? {
-        let renderer = UIGraphicsImageRenderer(size: size)
-        return renderer.image { _ in
-            self.draw(in: CGRect(origin: .zero, size: size))
         }
     }
 }

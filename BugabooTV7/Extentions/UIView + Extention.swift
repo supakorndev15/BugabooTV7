@@ -47,3 +47,25 @@ struct WindowConstant {
     }
 }
 
+
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { _ in
+            self.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+}
+
+extension UIViewController {
+    func showConfirmationAlert(title: String, message: String, onConfirm: @escaping () -> Void) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ตกลง", style: .default) { _ in
+            onConfirm()
+        }
+        let cancelAction = UIAlertAction(title: "ยกเลิก", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+}

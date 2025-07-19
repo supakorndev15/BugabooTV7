@@ -58,7 +58,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
                 print("ปุ่มดูทั้งหมดถูกกด")
             }
         default:
-            header.configure(text: "✨ รายการวาไรตี้ หลากหลายรูปแบบ", buttonTitle: "ดูทั้งหมด >"){}
+            header.configure(text: "รายการวาไรตี้ หลากหลายรูปแบบ✨", buttonTitle: "ดูทั้งหมด >"){}
         }
         
         return header
@@ -69,7 +69,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         let layout = UICollectionViewCompositionalLayout {sectionIndex,enviroment in
             switch sectionIndex {
             case 0 :
-                return AppLayouts.shared.livePlayerSection() // Static
+                return AppLayouts.shared.livePlayerSection()
             case 1 :
                 return AppLayouts.shared.liveSection()
             case 2 :

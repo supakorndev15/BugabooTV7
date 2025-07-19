@@ -1,10 +1,3 @@
-//
-//  SectionHeaderViewReusableView.swift
-//  BugabooTV7
-//
-//  Created by MacDetail on 19/7/2568 BE.
-//
-
 import UIKit
 
 class SectionHeaderViewReusableView: UICollectionReusableView {
@@ -13,7 +6,11 @@ class SectionHeaderViewReusableView: UICollectionReusableView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        if let customFont = UIFont(name: "SukhumvitSet-Bold", size: 20) {
+            label.font = customFont
+        }
+        label.numberOfLines = 2
         label.textColor = .label
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -22,10 +19,12 @@ class SectionHeaderViewReusableView: UICollectionReusableView {
     private let titleUIButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("More", for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
         button.setTitleColor(.label, for: .normal)
         button.setContentHuggingPriority(.required, for: .horizontal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        if let customFont = UIFont(name: "SukhumvitSet-Medium", size: 16) {
+            button.titleLabel?.font = customFont
+        }
         return button
     }()
     
@@ -42,17 +41,23 @@ class SectionHeaderViewReusableView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        addSubview(titleLabel)
+        addSubview(titleUIButton)
+        
+        titleUIButton.setTitleColor(.purple, for: .normal)
         // Add subviews
         horizontalStack.addArrangedSubview(titleLabel)
         horizontalStack.addArrangedSubview(titleUIButton)
         addSubview(horizontalStack)
 
-        // Constraints
         NSLayoutConstraint.activate([
-            horizontalStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            horizontalStack.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            horizontalStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
-            // ไม่ fix trailing เพื่อให้ content ขยับได้
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+            
+            titleUIButton.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8),
+            titleUIButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            titleUIButton.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -16)
         ])
     }
     
