@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="defaultVerticalCollectionViewCell" id="gTV-IL-0wX" customClass="defaultVerticalCollectionViewCell" customModule="BugabooTV7" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="331" height="280"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-c0-5Ha">
+                        <rect key="frame" x="5" y="0.0" width="321" height="280"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="highlight_4" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-HI-XRS">
+                                <rect key="frame" x="0.0" y="0.0" width="321" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="kzs-5k-CJC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diY-rd-smX">
+                                <rect key="frame" x="0.0" y="205" width="46.666666666666664" height="22.666666666666657"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="17 ">
+                                        <attributes>
+                                            <font key="NSFont" size="11" name="SukhumvitSet-Light"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="กค">
+                                        <attributes>
+                                            <font key="NSFont" size="11" name="SukhumvitSet-Light"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". 68">
+                                        <attributes>
+                                            <font key="NSFont" size="11" name="SukhumvitSet-Light"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วอลเลย์บอล นักเรียนหญิง แชมป์ กีฬา 7HDวอลเลย์บอล นักเรียนหญิง แชมป์ กีฬา 7HDวอลเลย์บอล นักเรียนหญิง แชมป์ กีฬา 7HD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkV-Rp-Bsv">
+                                <rect key="frame" x="0.0" y="232.66666666666666" width="313.33333333333331" height="47.333333333333343"/>
+                                <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="NHD-c0-5Ha" secondAttribute="bottom" id="Z0h-OV-Bjq"/>
+                <constraint firstItem="NHD-c0-5Ha" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="jpe-7c-fHH"/>
+                <constraint firstItem="NHD-c0-5Ha" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rTV-6i-ply"/>
+                <constraint firstAttribute="trailing" secondItem="NHD-c0-5Ha" secondAttribute="trailing" constant="5" id="u5M-vh-GTH"/>
+            </constraints>
+            <size key="customSize" width="331" height="310"/>
+            <connections>
+                <outlet property="dateTitleLabel" destination="diY-rd-smX" id="KwP-gn-9KU"/>
+                <outlet property="imgImageView" destination="h0h-HI-XRS" id="Nrc-sr-Akb"/>
+                <outlet property="subTitleLabel" destination="vkV-Rp-Bsv" id="SKd-SS-DSe"/>
+            </connections>
+            <point key="canvasLocation" x="374.80916030534348" y="111.26760563380282"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="highlight_4" width="500" height="281.5"/>
+    </resources>
+</document>

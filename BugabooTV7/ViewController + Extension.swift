@@ -17,7 +17,41 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         collectionView.register(UINib(nibName: "WelcomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: WelcomeCollectionViewCell.cellIdentifier)
         collectionView.register(UINib(nibName: "TopHighlightCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: TopHighlightCollectionViewCell.cellIdentifier)
         collectionView.register(UINib(nibName: "CatListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CatListCollectionViewCell.cellIdentifier)
+        collectionView.register(UINib(nibName: "defaultVerticalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: defaultVerticalCollectionViewCell.cellIdentifier)
+        // Header
+        collectionView.register(
+            SectionHeaderViewReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: SectionHeaderViewReusableView.reuseIdentifier
+        )
     }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        at indexPath: IndexPath
+    ) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            return UICollectionReusableView()
+        }
+
+        let header = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: SectionHeaderViewReusableView.reuseIdentifier,
+            for: indexPath
+        ) as! SectionHeaderViewReusableView
+
+        // ถ้ามี Data ต้อง Chceck if
+        switch indexPath.section {
+        case 5:
+            header.configure(text: "ละครช่อง 7HD")
+        default:
+            header.configure(text: "✨ รายการอื่น ๆ")
+        }
+
+        return header
+    }
+
     
     // configureCompositionalLayout
     func configureCompositionalLayout(){
@@ -34,7 +68,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             case 4 :
                 return AppLayouts.shared.catCategorySection()
             case 5 :
-                return AppLayouts.shared.defaultSectionLayout()
+                return AppLayouts.shared.verticalDefaultSectionLayout()
             case 6 :
                 return AppLayouts.shared.defaultSectionLayout()
             default:
@@ -97,6 +131,12 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatListCollectionViewCell.cellIdentifier, for: indexPath) as? CatListCollectionViewCell else {fatalError("Unable deque cell...")}
             cell.cellData = foodCategoryMockData[indexPath.row]
             return cell
+        
+        case 5 :
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: defaultVerticalCollectionViewCell.cellIdentifier, for: indexPath) as? defaultVerticalCollectionViewCell else {fatalError("Unable deque cell...")}
+            cell.cellData = verticalMockData[indexPath.row]
+            return cell
+            //defaultVerticalCollectionViewCell
         default:
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}
@@ -107,6 +147,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
 }
 
 extension ViewController {
+    // Example
     func fetchLiveChannels() {
         APIService.shared.request(endpoint: .liveChannels) { (result: Result<LiveChannelsModel, Error>) in
             switch result {

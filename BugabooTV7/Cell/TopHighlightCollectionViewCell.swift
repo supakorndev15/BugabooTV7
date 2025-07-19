@@ -11,7 +11,6 @@ class TopHighlightCollectionViewCell: UICollectionViewCell {
 
     static let cellIdentifier = "TopHighlightCollectionViewCell"
     
-    
     var cellData : FoodCategoryModel? {
         didSet {
             guard let cellData = cellData else {

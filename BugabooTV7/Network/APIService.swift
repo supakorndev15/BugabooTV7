@@ -32,3 +32,7 @@ class APIService {
             }
     }
 }
+
+// https://bff-web-api.bugaboo.tv/bff-web/v1/navigation/highlight-menu?personalized=false
+
+// https://bff-web-api.bugaboo.tv/bff-web/v1/fetch-seo/th%2F

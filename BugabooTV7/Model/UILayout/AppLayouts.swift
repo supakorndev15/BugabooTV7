@@ -43,6 +43,18 @@ class AppLayouts {
         section.interGroupSpacing = 10
         section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
         
+//        // ✅ กำหนด header
+//        let headerSize = NSCollectionLayoutSize(
+//            widthDimension: .fractionalWidth(1.0),
+//            heightDimension: .absolute(40)
+//        )
+//        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+//            layoutSize: headerSize,
+//            elementKind: UICollectionView.elementKindSectionHeader,
+//            alignment: .top
+//        )
+//        section.boundarySupplementaryItems = [sectionHeader]
+        
         return section
     }
 
@@ -143,19 +155,6 @@ class AppLayouts {
     }
     
     func defaultSectionLayout() -> NSCollectionLayoutSection {
-//        let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-//        
-//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(170), heightDimension: .absolute(260)), subitems: [item])
-//        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 25)
-//        
-//        let section = NSCollectionLayoutSection(group: group)
-//        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 60, trailing: -10)
-//        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
-//        
-//        section.boundarySupplementaryItems = [
-//            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(100)), elementKind: "Header", alignment: .top),
-//        ]
-         
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(150), heightDimension: .absolute(300))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
@@ -169,6 +168,49 @@ class AppLayouts {
         
         let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
         section.decorationItems = [decorationItem]
+        
+        // กำหนด header
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(40)
+        )
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        section.boundarySupplementaryItems = [sectionHeader]
+        
+        return section
+    }
+    
+    // 
+    func verticalDefaultSectionLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(150), heightDimension: .absolute(250))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(150), heightDimension: .absolute(250))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        section.interGroupSpacing = 5
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0)
+//        
+//        let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: "SectionBackground")
+//        section.decorationItems = [decorationItem]
+//        
+        // กำหนด header
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(40)
+        )
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        section.boundarySupplementaryItems = [sectionHeader]
         
         return section
     }
