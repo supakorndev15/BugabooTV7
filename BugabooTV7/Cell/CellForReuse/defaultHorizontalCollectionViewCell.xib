@@ -21,13 +21,13 @@
                         <rect key="frame" x="5" y="0.0" width="321" height="280"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="highlight_4" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-HI-XRS">
-                                <rect key="frame" x="0.0" y="0.0" width="321" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="321" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="kzs-5k-CJC"/>
+                                    <constraint firstAttribute="height" constant="150" id="kzs-5k-CJC"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diY-rd-smX">
-                                <rect key="frame" x="0.0" y="205" width="46.666666666666664" height="22.666666666666657"/>
+                                <rect key="frame" x="0.0" y="155" width="46.666666666666664" height="72.666666666666686"/>
                                 <attributedString key="attributedText">
                                     <fragment content="17 ">
                                         <attributes>

@@ -13,14 +13,14 @@ class HorizontalListViewModel {
 }
 
 let horizontalMockData = [
-    HorizontalModel(coverImage: "highlight_1", name: "TV CH7", categoryTags: "TV CH7"),
-    HorizontalModel(coverImage: "highlight_2", name: "TV CH7", categoryTags: "TV CH7"),
+    HorizontalModel(coverImage: "highlight_1", name: "TV CH7", categoryTags: "TV CH7highlight_1"),
+    HorizontalModel(coverImage: "highlight_2", name: "TV CH7", categoryTags: "TV CH7highlight_1"),
     HorizontalModel(coverImage: "highlight_3", name: "TV CH7", categoryTags: "TV CH7"),
     HorizontalModel(coverImage: "highlight_4", name: "TV CH7", categoryTags: "TV CH7"),
-    HorizontalModel(coverImage: "highlight_5", name: "TV CH7", categoryTags: "TV CH7"),
-    HorizontalModel(coverImage: "highlight_6", name: "TV CH7", categoryTags: "TV CH7"),
     HorizontalModel(coverImage: "highlight_1", name: "TV CH7", categoryTags: "TV CH7"),
+    HorizontalModel(coverImage: "highlight_2", name: "TV CH7", categoryTags: "TV CH7"),
+    HorizontalModel(coverImage: "highlight_3", name: "TV CH7", categoryTags: "TV CH7highlight_1"),
+    HorizontalModel(coverImage: "highlight_4", name: "TV CH7", categoryTags: "TV CH7"),
     HorizontalModel(coverImage: "highlight_1", name: "TV CH7", categoryTags: "TV CH7"),
-    HorizontalModel(coverImage: "highlight_1", name: "TV CH7", categoryTags: "TV CH7"),
-    HorizontalModel(coverImage: "highlight_1", name: "TV CH7", categoryTags: "TV CH7")
+    HorizontalModel(coverImage: "highlight_2", name: "TV CH7", categoryTags: "TV CH7")
 ]
