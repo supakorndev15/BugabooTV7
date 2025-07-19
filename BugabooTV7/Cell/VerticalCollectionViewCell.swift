@@ -17,7 +17,7 @@ class VerticalCollectionViewCell: UICollectionViewCell {
         didSet {
             guard let cellData = cellData else { return }
             restaurantImage.image = UIImage(named: cellData.coverImage)
-            title.text = cellData.restaurantName
+            title.text = cellData.name
             subtitle.text = cellData.categoryTags
         }
     }

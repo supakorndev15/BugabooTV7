@@ -18,6 +18,7 @@
 		A85000E82E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85000E62E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib */; };
 		A85000EB2E2B77A9002F0810 /* CatListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85000E92E2B77A9002F0810 /* CatListCollectionViewCell.swift */; };
 		A85000EC2E2B77A9002F0810 /* CatListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85000EA2E2B77A9002F0810 /* CatListCollectionViewCell.xib */; };
+		A85000EE2E2B7E6E002F0810 /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85000ED2E2B7E6D002F0810 /* ViewController + Extension.swift */; };
 		A88B27182E2B4AE800029933 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B27172E2B4AE800029933 /* APIService.swift */; };
 		A88B271B2E2B4B0300029933 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B271A2E2B4B0300029933 /* APIEndpoint.swift */; };
 		A88B271D2E2B4B2600029933 /* LiveChannelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B271C2E2B4B2600029933 /* LiveChannelsModel.swift */; };
@@ -79,6 +80,7 @@
 		A85000E62E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHighlightCollectionViewCell.xib; sourceTree = "<group>"; };
 		A85000E92E2B77A9002F0810 /* CatListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A85000EA2E2B77A9002F0810 /* CatListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatListCollectionViewCell.xib; sourceTree = "<group>"; };
+		A85000ED2E2B7E6D002F0810 /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
 		A88B27172E2B4AE800029933 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A88B271A2E2B4B0300029933 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		A88B271C2E2B4B2600029933 /* LiveChannelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsModel.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				A8A4E3932E29EAE300E71A9F /* View */,
 				A8A4E3582E2948D900E71A9F /* AppDelegate.swift */,
 				A8A4E35C2E2948D900E71A9F /* ViewController.swift */,
+				A85000ED2E2B7E6D002F0810 /* ViewController + Extension.swift */,
 				A8A4E35A2E2948D900E71A9F /* SceneDelegate.swift */,
 				A8A4E35E2E2948D900E71A9F /* Main.storyboard */,
 				A8A4E3612E2948DC00E71A9F /* Assets.xcassets */,
@@ -510,6 +513,7 @@
 				A8A4E38B2E29E59900E71A9F /* TopbannerModel.swift in Sources */,
 				A88B271B2E2B4B0300029933 /* APIEndpoint.swift in Sources */,
 				A8A4E39B2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift in Sources */,
+				A85000EE2E2B7E6E002F0810 /* ViewController + Extension.swift in Sources */,
 				A85000EB2E2B77A9002F0810 /* CatListCollectionViewCell.swift in Sources */,
 				A8A4E38E2E29E87F00E71A9F /* VerticalCollectionViewCell.swift in Sources */,
 				A8A4E3A72E2A42B700E71A9F /* CarouselChannelModel.swift in Sources */,

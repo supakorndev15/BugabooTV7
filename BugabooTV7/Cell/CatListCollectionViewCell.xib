@@ -18,18 +18,18 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black-circle" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-yC-h24">
-                        <rect key="frame" x="10" y="23.666666666666664" width="89" height="73.333333333333343"/>
+                        <rect key="frame" x="10" y="10" width="89" height="73.333333333333329"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="73.333333333333329" id="ks7-bM-vJe"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-jk-FLi">
-                        <rect key="frame" x="14" y="99" width="81" height="27"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-jk-FLi">
+                        <rect key="frame" x="14" y="85.333333333333329" width="81" height="40.666666666666671"/>
                         <attributedString key="attributedText">
-                            <fragment content="Label">
+                            <fragment content="LabelLabelLabelLabel">
                                 <attributes>
-                                    <font key="NSFont" size="17" name="SukhumvitSet-Medium"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    <font key="NSFont" size="16" name="SukhumvitSet-Medium"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
@@ -39,6 +39,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="1Ii-yC-h24" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="A8W-dA-QBi"/>
                 <constraint firstAttribute="trailing" secondItem="Q44-jk-FLi" secondAttribute="trailing" constant="14" id="AB6-ve-Zeh"/>
                 <constraint firstAttribute="bottom" secondItem="Q44-jk-FLi" secondAttribute="bottom" constant="10" id="TEh-Sr-rtl"/>
                 <constraint firstItem="1Ii-yC-h24" firstAttribute="centerX" secondItem="Q44-jk-FLi" secondAttribute="centerX" id="V9Q-c3-fuZ"/>

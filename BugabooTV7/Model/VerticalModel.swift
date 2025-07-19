@@ -9,20 +9,20 @@ import Foundation
 
 struct VerticalModel {
     let coverImage: String
-    let restaurantName: String
+    let name: String
     let categoryTags: String
 }
 
 let verticalMockData = [
-    VerticalModel(coverImage: "verti_highlight_1", restaurantName: "Punjabi Dhaba 35", categoryTags: "North Indian, Punjabi"),
-    VerticalModel(coverImage: "verti_highlight_2", restaurantName: "Bittu Da Dhabha", categoryTags: "North India"),
-    VerticalModel(coverImage: "verti_highlight_3", restaurantName: "The Rice Junction", categoryTags: "Indian"),
-    VerticalModel(coverImage: "verti_highlight_4", restaurantName: "The Food Garden", categoryTags: "Pizza"),
-    VerticalModel(coverImage: "verti_highlight_5", restaurantName: "The Food Garden", categoryTags: "Pizza"),
-    VerticalModel(coverImage: "verti_highlight_6", restaurantName: "The Food Garden", categoryTags: "Pizza"),
-    VerticalModel(coverImage: "verti_highlight_7", restaurantName: "The Food Garden", categoryTags: "Pizza"),
-    VerticalModel(coverImage: "verti_highlight_8", restaurantName: "The Food Garden", categoryTags: "Pizza"),
-    VerticalModel(coverImage: "verti_highlight_9", restaurantName: "The Food Garden", categoryTags: "Pizza"),
-    VerticalModel(coverImage: "verti_highlight_10", restaurantName: "The Food Garden", categoryTags: "Pizza")
+    VerticalModel(coverImage: "verti_highlight_1", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_2", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_3", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_4", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_5", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_6", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_7", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_8", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_9", name: "TV CH7", categoryTags: "TV CH7"),
+    VerticalModel(coverImage: "verti_highlight_10", name: "TV CH7", categoryTags: "TV CH7")
     
 ]
