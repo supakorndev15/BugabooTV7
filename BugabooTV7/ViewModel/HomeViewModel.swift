@@ -15,6 +15,7 @@ class HomeViewModel {
             switch result {
             case .success(let data):
                 self?.liveChannels = data.data.channels
+                print("✅")
                 completion()
             case .failure(let error):
                 print("❌", error.localizedDescription)

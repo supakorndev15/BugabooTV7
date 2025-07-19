@@ -46,11 +46,19 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         // ถ้ามี Data ต้อง Chceck if
         switch indexPath.section {
         case 5:
-            header.configure(text: "วอลเลย์บอล นักเรียนหญิง แชมป์กีฬา 7HD 2025")
+            header.configure(text: "รายการเด่น", buttonTitle: "เพิ่มเติม >") {
+                print("ปุ่มดูทั้งหมดถูกกด")
+                let urlString = "https://www.bugaboo.tv/th/variety/volleyballchamp7hd2025/"
+                if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
+            }
         case 6:
-            header.configure(text: "ละครช่อง 7HD")
+            header.configure(text: "ละครช่อง 7HD", buttonTitle: "เพิ่มเติม >") {
+                print("ปุ่มดูทั้งหมดถูกกด")
+            }
         default:
-            header.configure(text: "✨ รายการวาไรตี้ หลากหลายรูปแบบ")
+            header.configure(text: "✨ รายการวาไรตี้ หลากหลายรูปแบบ", buttonTitle: "ดูทั้งหมด >"){}
         }
         
         return header
@@ -119,12 +127,12 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             return cell
         case 1 :
             // Check data
-            if let channel = viewModel.channel(at: indexPath.row) {
-                print("✅ Channel:", channel)
-            } else {
-                print("⚠️ Invalid index \(indexPath.row)")
-                //                cell.isHidden = true
-            }
+//            if let channel = viewModel.channel(at: indexPath.row) {
+//                print("✅ Channel:", channel)
+//            } else {
+//                print("⚠️ Invalid index \(indexPath.row)")
+//                //                cell.isHidden = true
+//            }
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MiniTopCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? MiniTopCategoryCollectionViewCell else {fatalError("Unable deque cell...")}
             
@@ -138,7 +146,6 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         case 3 :
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopHighlightCollectionViewCell.cellIdentifier, for: indexPath) as? TopHighlightCollectionViewCell else {fatalError("Unable deque cell...")}
-            print("")
             return cell
         case 4 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatListCollectionViewCell.cellIdentifier, for: indexPath) as? CatListCollectionViewCell else {fatalError("Unable deque cell...")}
