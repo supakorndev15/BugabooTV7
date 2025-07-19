@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopHighlightCollectionViewCell" id="gTV-IL-0wX" customClass="TopHighlightCollectionViewCell" customModule="BugabooTV7" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="254" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="254" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highlight_1" translatesAutoresizingMaskIntoConstraints="NO" id="UDd-AH-3Rr">
+                        <rect key="frame" x="0.0" y="0.0" width="254" height="160"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pG-XN-BkF">
+                        <rect key="frame" x="8" y="8" width="61" height="28"/>
+                        <color key="backgroundColor" red="0.99606615300000001" green="0.9960052371" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="rWf-dX-jjj"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <attributedString key="attributedTitle">
+                                <fragment content="ดูวาไรตี">
+                                    <attributes>
+                                        <color key="NSColor" red="0.84563595059999996" green="0.41701358560000001" blue="0.91194665429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name="SukhumvitSet-Medium"/>
+                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <color key="baseForegroundColor" red="0.79213351009999999" green="0.0" blue="0.87467306850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </buttonConfiguration>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornorRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="actionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gDc-3e-tKu"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGs-dw-CGQ">
+                        <rect key="frame" x="12" y="119" width="230" height="27"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="17" name="SukhumvitSet-Light"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UDd-AH-3Rr" secondAttribute="trailing" id="6ha-Fj-leG"/>
+                <constraint firstItem="UDd-AH-3Rr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8x0-gx-cFP"/>
+                <constraint firstItem="1pG-XN-BkF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="LmT-pm-0Q9"/>
+                <constraint firstItem="UDd-AH-3Rr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pcy-Al-4zF"/>
+                <constraint firstAttribute="bottom" secondItem="UDd-AH-3Rr" secondAttribute="bottom" id="f60-7a-d2k"/>
+                <constraint firstItem="bGs-dw-CGQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="g3R-Ga-hmo"/>
+                <constraint firstAttribute="trailing" secondItem="bGs-dw-CGQ" secondAttribute="trailing" constant="12" id="s1d-tr-s27"/>
+                <constraint firstAttribute="bottom" secondItem="bGs-dw-CGQ" secondAttribute="bottom" constant="14" id="xyy-jq-pbY"/>
+                <constraint firstItem="1pG-XN-BkF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="ynC-Np-WgY"/>
+            </constraints>
+            <size key="customSize" width="254" height="143"/>
+            <connections>
+                <outlet property="imgImageView" destination="UDd-AH-3Rr" id="OVo-a7-9xj"/>
+                <outlet property="titleLabel" destination="bGs-dw-CGQ" id="lpB-fs-tHr"/>
+                <outlet property="topLeftUIButton" destination="1pG-XN-BkF" id="nqU-3r-cKa"/>
+            </connections>
+            <point key="canvasLocation" x="294.6564885496183" y="53.169014084507047"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="highlight_1" width="500" height="281.5"/>
+    </resources>
+</document>

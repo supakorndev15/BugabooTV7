@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8657A3B4EDF3E5A108418A96 /* Pods_BugabooTV7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */; };
+		A85000DD2E2B692C002F0810 /* SukhumvitSet-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D72E2B6929002F0810 /* SukhumvitSet-Bold.ttf */; };
+		A85000DE2E2B692C002F0810 /* SukhumvitSet-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D82E2B6929002F0810 /* SukhumvitSet-SemiBold.ttf */; };
+		A85000DF2E2B692C002F0810 /* SukhumvitSet-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D92E2B6929002F0810 /* SukhumvitSet-Thin.ttf */; };
+		A85000E02E2B692C002F0810 /* SukhumvitSet-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000DA2E2B692A002F0810 /* SukhumvitSet-Light.ttf */; };
+		A85000E12E2B692C002F0810 /* SukhumvitSet-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000DB2E2B692A002F0810 /* SukhumvitSet-Medium.ttf */; };
+		A85000E22E2B692C002F0810 /* SukhumvitSet-Text.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000DC2E2B692B002F0810 /* SukhumvitSet-Text.ttf */; };
+		A85000E72E2B6F0E002F0810 /* TopHighlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85000E52E2B6F0E002F0810 /* TopHighlightCollectionViewCell.swift */; };
+		A85000E82E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85000E62E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib */; };
+		A85000EB2E2B77A9002F0810 /* CatListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85000E92E2B77A9002F0810 /* CatListCollectionViewCell.swift */; };
+		A85000EC2E2B77A9002F0810 /* CatListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85000EA2E2B77A9002F0810 /* CatListCollectionViewCell.xib */; };
 		A88B27182E2B4AE800029933 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B27172E2B4AE800029933 /* APIService.swift */; };
 		A88B271B2E2B4B0300029933 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B271A2E2B4B0300029933 /* APIEndpoint.swift */; };
 		A88B271D2E2B4B2600029933 /* LiveChannelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B271C2E2B4B2600029933 /* LiveChannelsModel.swift */; };
@@ -59,6 +69,16 @@
 		2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugabooTV7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C79F986173562343C0BE7CB /* Pods-BugabooTV7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.debug.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.debug.xcconfig"; sourceTree = "<group>"; };
 		7E054FDB9E00F2EC614B7A8E /* Pods-BugabooTV7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.release.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.release.xcconfig"; sourceTree = "<group>"; };
+		A85000D72E2B6929002F0810 /* SukhumvitSet-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Bold.ttf"; sourceTree = "<group>"; };
+		A85000D82E2B6929002F0810 /* SukhumvitSet-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-SemiBold.ttf"; sourceTree = "<group>"; };
+		A85000D92E2B6929002F0810 /* SukhumvitSet-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Thin.ttf"; sourceTree = "<group>"; };
+		A85000DA2E2B692A002F0810 /* SukhumvitSet-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Light.ttf"; sourceTree = "<group>"; };
+		A85000DB2E2B692A002F0810 /* SukhumvitSet-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Medium.ttf"; sourceTree = "<group>"; };
+		A85000DC2E2B692B002F0810 /* SukhumvitSet-Text.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Text.ttf"; sourceTree = "<group>"; };
+		A85000E52E2B6F0E002F0810 /* TopHighlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHighlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		A85000E62E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHighlightCollectionViewCell.xib; sourceTree = "<group>"; };
+		A85000E92E2B77A9002F0810 /* CatListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListCollectionViewCell.swift; sourceTree = "<group>"; };
+		A85000EA2E2B77A9002F0810 /* CatListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatListCollectionViewCell.xib; sourceTree = "<group>"; };
 		A88B27172E2B4AE800029933 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A88B271A2E2B4B0300029933 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		A88B271C2E2B4B2600029933 /* LiveChannelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsModel.swift; sourceTree = "<group>"; };
@@ -130,6 +150,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A85000D62E2B68ED002F0810 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A85000D72E2B6929002F0810 /* SukhumvitSet-Bold.ttf */,
+				A85000DA2E2B692A002F0810 /* SukhumvitSet-Light.ttf */,
+				A85000DB2E2B692A002F0810 /* SukhumvitSet-Medium.ttf */,
+				A85000D82E2B6929002F0810 /* SukhumvitSet-SemiBold.ttf */,
+				A85000DC2E2B692B002F0810 /* SukhumvitSet-Text.ttf */,
+				A85000D92E2B6929002F0810 /* SukhumvitSet-Thin.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		A88B27162E2B4AD500029933 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,12 +208,12 @@
 				A88B27162E2B4AD500029933 /* Network */,
 				A8A4E3892E29E55A00E71A9F /* Model */,
 				A8A4E3972E29EEAC00E71A9F /* Extentions */,
-				A8A4E3932E29EAE300E71A9F /* View */,
 				A8A4E38C2E29E84700E71A9F /* Cell */,
 				A8A4E3882E2984B800E71A9F /* Utility */,
+				A8A4E3932E29EAE300E71A9F /* View */,
 				A8A4E3582E2948D900E71A9F /* AppDelegate.swift */,
-				A8A4E35A2E2948D900E71A9F /* SceneDelegate.swift */,
 				A8A4E35C2E2948D900E71A9F /* ViewController.swift */,
+				A8A4E35A2E2948D900E71A9F /* SceneDelegate.swift */,
 				A8A4E35E2E2948D900E71A9F /* Main.storyboard */,
 				A8A4E3612E2948DC00E71A9F /* Assets.xcassets */,
 				A8A4E3632E2948DC00E71A9F /* LaunchScreen.storyboard */,
@@ -211,6 +244,7 @@
 		A8A4E3882E2984B800E71A9F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				A85000D62E2B68ED002F0810 /* fonts */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -238,6 +272,10 @@
 				A8A4E3A02E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift */,
 				A88B27212E2B627000029933 /* WelcomeCollectionViewCell.swift */,
 				A88B27222E2B627000029933 /* WelcomeCollectionViewCell.xib */,
+				A85000E52E2B6F0E002F0810 /* TopHighlightCollectionViewCell.swift */,
+				A85000E62E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib */,
+				A85000E92E2B77A9002F0810 /* CatListCollectionViewCell.swift */,
+				A85000EA2E2B77A9002F0810 /* CatListCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -385,8 +423,16 @@
 				A8A4E3652E2948DC00E71A9F /* LaunchScreen.storyboard in Resources */,
 				A8A4E3A32E2A0BDC00E71A9F /* 7hd.m3u8 in Resources */,
 				A8A4E3622E2948DC00E71A9F /* Assets.xcassets in Resources */,
+				A85000DF2E2B692C002F0810 /* SukhumvitSet-Thin.ttf in Resources */,
+				A85000E02E2B692C002F0810 /* SukhumvitSet-Light.ttf in Resources */,
+				A85000E12E2B692C002F0810 /* SukhumvitSet-Medium.ttf in Resources */,
+				A85000DD2E2B692C002F0810 /* SukhumvitSet-Bold.ttf in Resources */,
+				A85000E82E2B6F0E002F0810 /* TopHighlightCollectionViewCell.xib in Resources */,
 				A8A4E39F2E2A07F000E71A9F /* LiveCh7PlayerCollectionViewCell.xib in Resources */,
 				A88B27242E2B627000029933 /* WelcomeCollectionViewCell.xib in Resources */,
+				A85000EC2E2B77A9002F0810 /* CatListCollectionViewCell.xib in Resources */,
+				A85000E22E2B692C002F0810 /* SukhumvitSet-Text.ttf in Resources */,
+				A85000DE2E2B692C002F0810 /* SukhumvitSet-SemiBold.ttf in Resources */,
 				A8A4E3A52E2A100700E71A9F /* HD_1080p.m3u8 in Resources */,
 				A8A4E3602E2948D900E71A9F /* Main.storyboard in Resources */,
 			);
@@ -457,12 +503,14 @@
 			files = (
 				A8A4E35D2E2948D900E71A9F /* ViewController.swift in Sources */,
 				A88B27232E2B627000029933 /* WelcomeCollectionViewCell.swift in Sources */,
+				A85000E72E2B6F0E002F0810 /* TopHighlightCollectionViewCell.swift in Sources */,
 				A88B271F2E2B4B4000029933 /* HighlightMenuModel.swift in Sources */,
 				A8A4E3902E29E8C700E71A9F /* VerticalModel.swift in Sources */,
 				A8A4E3A12E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift in Sources */,
 				A8A4E38B2E29E59900E71A9F /* TopbannerModel.swift in Sources */,
 				A88B271B2E2B4B0300029933 /* APIEndpoint.swift in Sources */,
 				A8A4E39B2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift in Sources */,
+				A85000EB2E2B77A9002F0810 /* CatListCollectionViewCell.swift in Sources */,
 				A8A4E38E2E29E87F00E71A9F /* VerticalCollectionViewCell.swift in Sources */,
 				A8A4E3A72E2A42B700E71A9F /* CarouselChannelModel.swift in Sources */,
 				A8A4E3992E29EEBE00E71A9F /* UIView + Extention.swift in Sources */,
