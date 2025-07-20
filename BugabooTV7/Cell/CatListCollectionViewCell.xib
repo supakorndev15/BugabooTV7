@@ -23,11 +23,12 @@
                             <constraint firstAttribute="height" constant="73.333333333333329" id="ks7-bM-vJe"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-jk-FLi">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-jk-FLi">
                         <rect key="frame" x="14" y="85.333333333333329" width="81" height="40.666666666666671"/>
                         <attributedString key="attributedText">
                             <fragment content="LabelLabelLabelLabel">
                                 <attributes>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <font key="NSFont" size="16" name="SukhumvitSet-Medium"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                 </attributes>
@@ -35,15 +36,25 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-dD-3EI">
+                        <rect key="frame" x="44.666666666666664" y="37.666666666666657" width="19.999999999999993" height="18.333333333333336"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="E5O-f5-UaK"/>
+                            <constraint firstAttribute="height" constant="20" id="geV-ue-yan"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="1Ii-yC-h24" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="A8W-dA-QBi"/>
                 <constraint firstAttribute="trailing" secondItem="Q44-jk-FLi" secondAttribute="trailing" constant="14" id="AB6-ve-Zeh"/>
+                <constraint firstItem="W7P-dD-3EI" firstAttribute="centerY" secondItem="1Ii-yC-h24" secondAttribute="centerY" id="MIp-xn-saW"/>
                 <constraint firstAttribute="bottom" secondItem="Q44-jk-FLi" secondAttribute="bottom" constant="10" id="TEh-Sr-rtl"/>
                 <constraint firstItem="1Ii-yC-h24" firstAttribute="centerX" secondItem="Q44-jk-FLi" secondAttribute="centerX" id="V9Q-c3-fuZ"/>
                 <constraint firstItem="Q44-jk-FLi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="f1U-I3-F1g"/>
+                <constraint firstItem="W7P-dD-3EI" firstAttribute="centerX" secondItem="1Ii-yC-h24" secondAttribute="centerX" id="mNN-bj-eth"/>
                 <constraint firstItem="1Ii-yC-h24" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="tyg-DD-z3S"/>
                 <constraint firstItem="Q44-jk-FLi" firstAttribute="top" secondItem="1Ii-yC-h24" secondAttribute="bottom" constant="2" id="wRe-gv-zO3"/>
             </constraints>
@@ -57,5 +68,6 @@
     </objects>
     <resources>
         <image name="black-circle" width="256" height="256"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
     </resources>
 </document>

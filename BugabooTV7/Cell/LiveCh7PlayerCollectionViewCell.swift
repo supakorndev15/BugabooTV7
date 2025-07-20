@@ -66,7 +66,7 @@ class LiveCh7PlayerCollectionViewCell: UICollectionViewCell {
     
     func playVideo() {
         queuePlayer?.play()
-        queuePlayer?.isMuted = false
+//        queuePlayer?.isMuted = false
         print("PLAY VDO")
     }
 

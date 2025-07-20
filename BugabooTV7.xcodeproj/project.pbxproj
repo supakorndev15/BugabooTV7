@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8657A3B4EDF3E5A108418A96 /* Pods_BugabooTV7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */; };
+		A80957832E2CC18C00B88F06 /* BubbleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80957822E2CC18C00B88F06 /* BubbleMenu.swift */; };
 		A85000DD2E2B692C002F0810 /* SukhumvitSet-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D72E2B6929002F0810 /* SukhumvitSet-Bold.ttf */; };
 		A85000DE2E2B692C002F0810 /* SukhumvitSet-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D82E2B6929002F0810 /* SukhumvitSet-SemiBold.ttf */; };
 		A85000DF2E2B692C002F0810 /* SukhumvitSet-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D92E2B6929002F0810 /* SukhumvitSet-Thin.ttf */; };
@@ -81,6 +82,7 @@
 		2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugabooTV7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C79F986173562343C0BE7CB /* Pods-BugabooTV7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.debug.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.debug.xcconfig"; sourceTree = "<group>"; };
 		7E054FDB9E00F2EC614B7A8E /* Pods-BugabooTV7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.release.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.release.xcconfig"; sourceTree = "<group>"; };
+		A80957822E2CC18C00B88F06 /* BubbleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleMenu.swift; sourceTree = "<group>"; };
 		A85000D72E2B6929002F0810 /* SukhumvitSet-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Bold.ttf"; sourceTree = "<group>"; };
 		A85000D82E2B6929002F0810 /* SukhumvitSet-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-SemiBold.ttf"; sourceTree = "<group>"; };
 		A85000D92E2B6929002F0810 /* SukhumvitSet-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Thin.ttf"; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 				7E054FDB9E00F2EC614B7A8E /* Pods-BugabooTV7.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A80957812E2CC16000B88F06 /* BubbleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A80957822E2CC18C00B88F06 /* BubbleMenu.swift */,
+			);
+			path = BubbleMenu;
 			sourceTree = "<group>";
 		};
 		A85000D62E2B68ED002F0810 /* fonts */ = {
@@ -302,6 +312,7 @@
 		A8A4E3892E29E55A00E71A9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A80957812E2CC16000B88F06 /* BubbleMenu */,
 				A88B27202E2B5AEC00029933 /* UILayout */,
 				A8A4E38A2E29E59900E71A9F /* TopbannerModel.swift */,
 				A8A4E3A62E2A42B700E71A9F /* CarouselChannelModel.swift */,
@@ -582,6 +593,7 @@
 				A8A4E35B2E2948D900E71A9F /* SceneDelegate.swift in Sources */,
 				A8A4E39D2E29FF1100E71A9F /* categoryModel.swift in Sources */,
 				A85000F22E2B85FA002F0810 /* defaultVerticalCollectionViewCell.swift in Sources */,
+				A80957832E2CC18C00B88F06 /* BubbleMenu.swift in Sources */,
 				A8A4E3962E29EB2400E71A9F /* SectionDecorationView.swift in Sources */,
 				A8A4E3922E29EA9A00E71A9F /* AppLayouts.swift in Sources */,
 				A88B271D2E2B4B2600029933 /* LiveChannelsModel.swift in Sources */,
