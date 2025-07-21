@@ -60,6 +60,9 @@
 		A8A4E3A32E2A0BDC00E71A9F /* 7hd.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4E3A22E2A0BDB00E71A9F /* 7hd.m3u8 */; };
 		A8A4E3A52E2A100700E71A9F /* HD_1080p.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = A8A4E3A42E2A100600E71A9F /* HD_1080p.m3u8 */; };
 		A8A4E3A72E2A42B700E71A9F /* CarouselChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4E3A62E2A42B700E71A9F /* CarouselChannelModel.swift */; };
+		A8E138752E2E408600744213 /* HighlightMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E138742E2E408600744213 /* HighlightMenu.swift */; };
+		A8E138772E2E418C00744213 /* HighlightMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E138762E2E418C00744213 /* HighlightMenuViewModel.swift */; };
+		A8E138792E2E486C00744213 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E138782E2E486C00744213 /* UIImage + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +144,9 @@
 		A8A4E3A62E2A42B700E71A9F /* CarouselChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselChannelModel.swift; sourceTree = "<group>"; };
 		A8A4E3A82E2B41C900E71A9F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A4E3AC2E2B440B00E71A9F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E138742E2E408600744213 /* HighlightMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightMenu.swift; sourceTree = "<group>"; };
+		A8E138762E2E418C00744213 /* HighlightMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightMenuViewModel.swift; sourceTree = "<group>"; };
+		A8E138782E2E486C00744213 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A80957822E2CC18C00B88F06 /* BubbleMenu.swift */,
+				A8E138742E2E408600744213 /* HighlightMenu.swift */,
 			);
 			path = BubbleMenu;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 				A85001032E2BD515002F0810 /* HorizontalCellViewModel.swift */,
 				A85001052E2BD831002F0810 /* HorizontalListViewModel.swift */,
 				A80957842E2CC75800B88F06 /* BubbleMenuViewModel.swift */,
+				A8E138762E2E418C00744213 /* HighlightMenuViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -366,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A4E3982E29EEBE00E71A9F /* UIView + Extention.swift */,
+				A8E138782E2E486C00744213 /* UIImage + Extension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -578,12 +587,14 @@
 				A88B271F2E2B4B4000029933 /* HighlightMenuModel.swift in Sources */,
 				A8A4E3902E29E8C700E71A9F /* VerticalModel.swift in Sources */,
 				A8A4E3A12E2A08DD00E71A9F /* LiveCh7PlayerCollectionViewCell.swift in Sources */,
+				A8E138752E2E408600744213 /* HighlightMenu.swift in Sources */,
 				A85001002E2BC49E002F0810 /* VerticalCellViewModel.swift in Sources */,
 				A8A4E38B2E29E59900E71A9F /* TopbannerModel.swift in Sources */,
 				A88B271B2E2B4B0300029933 /* APIEndpoint.swift in Sources */,
 				A85001022E2BC54D002F0810 /* VerticalListViewModel.swift in Sources */,
 				A8A4E39B2E29FEA900E71A9F /* MiniTopCategoryCollectionViewCell.swift in Sources */,
 				A85000EE2E2B7E6E002F0810 /* ViewController + Extension.swift in Sources */,
+				A8E138772E2E418C00744213 /* HighlightMenuViewModel.swift in Sources */,
 				A85000EB2E2B77A9002F0810 /* CatListCollectionViewCell.swift in Sources */,
 				A8A4E38E2E29E87F00E71A9F /* VerticalCollectionViewCell.swift in Sources */,
 				A85000FB2E2BB0FE002F0810 /* SectionHeaderViewReusableView.swift in Sources */,
@@ -595,6 +606,7 @@
 				A88B27182E2B4AE800029933 /* APIService.swift in Sources */,
 				A8A4E3592E2948D900E71A9F /* AppDelegate.swift in Sources */,
 				A8A4E35B2E2948D900E71A9F /* SceneDelegate.swift in Sources */,
+				A8E138792E2E486C00744213 /* UIImage + Extension.swift in Sources */,
 				A8A4E39D2E29FF1100E71A9F /* categoryModel.swift in Sources */,
 				A85000F22E2B85FA002F0810 /* defaultVerticalCollectionViewCell.swift in Sources */,
 				A80957832E2CC18C00B88F06 /* BubbleMenu.swift in Sources */,

@@ -46,6 +46,14 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         
         // ถ้ามี Data ต้อง Chceck if
         switch indexPath.section {
+        case 3:
+            header.configure(text: "ทดสอบ", buttonTitle: "เพิ่มเติม >") {
+                print("ปุ่มดูทั้งหมดถูกกด")
+                let urlString = "https://www.bugaboo.tv/th/variety/volleyballchamp7hd2025/"
+                if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
+            }
         case 5:
             header.configure(text: "รายการเด่น", buttonTitle: "เพิ่มเติม >") {
                 print("ปุ่มดูทั้งหมดถูกกด")
@@ -101,14 +109,16 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             return max(carouselChannelMockData.count, 4)
         case 2 :
             return 1
-        case 3,7 :
-            return 10
+        case 3:
+            return highlightMenuVM.numberOfItems() //highlightMenuVM.menus.count
         case 4 :
             return bubbleMenuVM.menus.count
         case 5 :
             return horizontalMockData.count
         case 6 :
             return verticalMockData.count
+        case 7 :
+            return 10
         default:
             return horizontalMockData.count
         }
@@ -145,8 +155,10 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WelcomeCollectionViewCell.cellIdentifier, for: indexPath) as? WelcomeCollectionViewCell else {fatalError("Unable deque cell...")}
             return cell
         case 3 :
-            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopHighlightCollectionViewCell.cellIdentifier, for: indexPath) as? TopHighlightCollectionViewCell else {fatalError("Unable deque cell...")}
+            let menuHighlight = highlightMenuVM.item(at: indexPath.row)
+            cell.configure(with: menuHighlight)
+            
             return cell
         case 4 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatListCollectionViewCell.cellIdentifier, for: indexPath) as? CatListCollectionViewCell else {fatalError("Unable deque cell...")}
@@ -154,9 +166,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             let menu = bubbleMenuVM.item(at: indexPath.row)
             cell.configure(with: menu)
             return cell
-            
         case 5 :
-            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: defaultHorizontalCollectionViewCell.cellIdentifier, for: indexPath) as? defaultHorizontalCollectionViewCell else {fatalError("Unable deque cell...")}
             let cellVM = horizontalListViewModel.viewModel(at: indexPath.row)
             cell.configure(with: cellVM)
@@ -174,6 +184,10 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             cell.configure(with: cellVM)
             return cell
         default:
+            
+            print(indexPath.item)
+            print(indexPath.section)
+            print(indexPath.row)
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.cellIdentifier, for: indexPath) as? VerticalCollectionViewCell else {fatalError("Unable deque cell...")}
             cell.cellData = horizontalMockData[indexPath.row]
             return cell

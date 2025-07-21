@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     let verticalListViewModel = VerticalListViewModel()
     let horizontalListViewModel = HorizontalListViewModel()
     let bubbleMenuVM = BubbleMenuViewModel()
+    let highlightMenuVM = HighlightMenuViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,9 @@ class ViewController: UIViewController {
             self.collectionView.reloadData()
         }
         
+        highlightMenuVM.fetchHighlightMenu {
+            self.collectionView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

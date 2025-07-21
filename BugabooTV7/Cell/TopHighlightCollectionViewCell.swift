@@ -1,26 +1,9 @@
-//
-//  TopHighlightCollectionViewCell.swift
-//  BugabooTV7
-//
-//  Created by MacDetail on 19/7/2568 BE.
-//
-
 import UIKit
 
 class TopHighlightCollectionViewCell: UICollectionViewCell {
 
     static let cellIdentifier = "TopHighlightCollectionViewCell"
-    
-    var cellData : FoodCategoryModel? {
-        didSet {
-            guard let cellData = cellData else {
-                return
-            }
-            imgImageView.image = UIImage(named: cellData.categoryImage)
-            titleLabel.text = cellData.categoryName
-        }
-    }
-    
+
     @IBOutlet weak var topLeftUIButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imgImageView: UIImageView!
@@ -32,9 +15,22 @@ class TopHighlightCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with menu: MainMenuItem) {
+        titleLabel.text = menu.title
+        imgImageView.loadImage(from: menu.imageURL.medium,
+                               placeholderName: "loading",
+                               fallbackImageName: "default")
     }
+}
 
+extension MainMenuItem {
+    func toMenu() -> Menu {
+        return Menu(
+            label: self.title,
+            targetURL: self.linkURL,
+            iconKey: "", // ถ้าไม่มีให้ใส่ค่าว่าง
+            iconURL: self.imageURL.medium,
+            showIcon: false
+        )
+    }
 }
