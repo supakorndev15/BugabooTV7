@@ -1,6 +1,7 @@
 
 import UIKit
 import Kingfisher
+//import KingfisherSVG
 
 class CatListCollectionViewCell: UICollectionViewCell {
 
@@ -10,31 +11,25 @@ class CatListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgImageView: UIImageView!
     @IBOutlet weak var iconImageView: UIImageView!
     
-    var cellData : FoodCategoryModel? {
-        didSet {
-            guard let cellData = cellData else {
-                return
-            }
-            imgImageView.image = UIImage(named: cellData.categoryImage)
-            titleLabel.text = cellData.categoryName
-        }
-    }
-    
     func configure(with menu: Menu) {
         titleLabel.text = menu.label
-        loadImage(from: menu.iconURL)
+//        loadImage(from: menu.iconURL)
+        guard let url = URL(string: "https://static.bugaboo.tv/mobile/images/super-app/icon/icon_shopping_bag_01.svg") else { return }
+        iconImageView.kf.setImage(with: url)
+        print("url : \(url)")
     }
     
     private func loadImage(from urlString: String) {
         guard let url = URL(string: urlString) else {
-            imgImageView.image = UIImage(named: "placeholder")
+            iconImageView.image = UIImage(named: "magnifyingglass")
             return
         }
         
+        print("url : \(url)")
         let placeholder = UIImage(named: "placeholder")
-        let processor = DownsamplingImageProcessor(size: imgImageView.bounds.size)
-        imgImageView.kf.indicatorType = .activity
-        imgImageView.kf.setImage(
+        let processor = DownsamplingImageProcessor(size: iconImageView.bounds.size)
+        iconImageView.kf.indicatorType = .activity
+        iconImageView.kf.setImage(
             with: url,
             placeholder: placeholder,
             options: [
@@ -45,5 +40,4 @@ class CatListCollectionViewCell: UICollectionViewCell {
             ]
         )
     }
-
 }
