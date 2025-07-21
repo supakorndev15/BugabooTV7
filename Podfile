@@ -7,5 +7,8 @@ target 'BugabooTV7' do
 
   # Pods for BugabooTV7
   pod 'Alamofire', '~> 5.8.0'
-
+  pod 'AlamofireImage', '~> 4.3.0'
+  pod 'Kingfisher', '~> 8.5.0'
+  pod 'SDWebImageSVGCoder'
+  pod 'SDWebImage', '~> 5.21.0'
 end

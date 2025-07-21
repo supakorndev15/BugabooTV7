@@ -23,6 +23,14 @@
                             <constraint firstAttribute="height" constant="73.333333333333329" id="ks7-bM-vJe"/>
                         </constraints>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-dD-3EI">
+                        <rect key="frame" x="44.666666666666664" y="37.666666666666657" width="19.999999999999993" height="18.333333333333336"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="E5O-f5-UaK"/>
+                            <constraint firstAttribute="height" constant="20" id="geV-ue-yan"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-jk-FLi">
                         <rect key="frame" x="14" y="85.333333333333329" width="81" height="40.666666666666671"/>
                         <attributedString key="attributedText">
@@ -36,14 +44,6 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-dD-3EI">
-                        <rect key="frame" x="44.666666666666664" y="37.666666666666657" width="19.999999999999993" height="18.333333333333336"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="E5O-f5-UaK"/>
-                            <constraint firstAttribute="height" constant="20" id="geV-ue-yan"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -60,6 +60,7 @@
             </constraints>
             <size key="customSize" width="109" height="136"/>
             <connections>
+                <outlet property="iconImageView" destination="W7P-dD-3EI" id="pNy-ml-dwl"/>
                 <outlet property="imgImageView" destination="1Ii-yC-h24" id="Oq2-NV-14x"/>
                 <outlet property="titleLabel" destination="Q44-jk-FLi" id="UFQ-zd-8r8"/>
             </connections>

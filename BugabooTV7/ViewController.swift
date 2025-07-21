@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     let viewModel = HomeViewModel()
     let verticalListViewModel = VerticalListViewModel()
     let horizontalListViewModel = HorizontalListViewModel()
+    let bubbleMenuVM = BubbleMenuViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,11 @@ class ViewController: UIViewController {
         setupCustomNavBar()
         cellRegister()
         configureCompositionalLayout()
+        
+        bubbleMenuVM.fetchMenus {
+            self.collectionView.reloadData()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

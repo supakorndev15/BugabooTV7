@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8657A3B4EDF3E5A108418A96 /* Pods_BugabooTV7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5F7605F3835285AFFB7611 /* Pods_BugabooTV7.framework */; };
 		A80957832E2CC18C00B88F06 /* BubbleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80957822E2CC18C00B88F06 /* BubbleMenu.swift */; };
+		A80957852E2CC75800B88F06 /* BubbleMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80957842E2CC75800B88F06 /* BubbleMenuViewModel.swift */; };
 		A85000DD2E2B692C002F0810 /* SukhumvitSet-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D72E2B6929002F0810 /* SukhumvitSet-Bold.ttf */; };
 		A85000DE2E2B692C002F0810 /* SukhumvitSet-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D82E2B6929002F0810 /* SukhumvitSet-SemiBold.ttf */; };
 		A85000DF2E2B692C002F0810 /* SukhumvitSet-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85000D92E2B6929002F0810 /* SukhumvitSet-Thin.ttf */; };
@@ -83,6 +84,7 @@
 		6C79F986173562343C0BE7CB /* Pods-BugabooTV7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.debug.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.debug.xcconfig"; sourceTree = "<group>"; };
 		7E054FDB9E00F2EC614B7A8E /* Pods-BugabooTV7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugabooTV7.release.xcconfig"; path = "Target Support Files/Pods-BugabooTV7/Pods-BugabooTV7.release.xcconfig"; sourceTree = "<group>"; };
 		A80957822E2CC18C00B88F06 /* BubbleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleMenu.swift; sourceTree = "<group>"; };
+		A80957842E2CC75800B88F06 /* BubbleMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleMenuViewModel.swift; sourceTree = "<group>"; };
 		A85000D72E2B6929002F0810 /* SukhumvitSet-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Bold.ttf"; sourceTree = "<group>"; };
 		A85000D82E2B6929002F0810 /* SukhumvitSet-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-SemiBold.ttf"; sourceTree = "<group>"; };
 		A85000D92E2B6929002F0810 /* SukhumvitSet-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SukhumvitSet-Thin.ttf"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				A85001012E2BC54D002F0810 /* VerticalListViewModel.swift */,
 				A85001032E2BD515002F0810 /* HorizontalCellViewModel.swift */,
 				A85001052E2BD831002F0810 /* HorizontalListViewModel.swift */,
+				A80957842E2CC75800B88F06 /* BubbleMenuViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A4E35D2E2948D900E71A9F /* ViewController.swift in Sources */,
+				A80957852E2CC75800B88F06 /* BubbleMenuViewModel.swift in Sources */,
 				A88B27232E2B627000029933 /* WelcomeCollectionViewCell.swift in Sources */,
 				A85000E72E2B6F0E002F0810 /* TopHighlightCollectionViewCell.swift in Sources */,
 				A85000FE2E2BBDC1002F0810 /* HomeViewModel.swift in Sources */,

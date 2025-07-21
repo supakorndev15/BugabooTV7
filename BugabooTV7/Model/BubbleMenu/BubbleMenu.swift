@@ -1,16 +1,14 @@
 
-import Foundation
-import UIKit
-
 // MARK: - BubbleMenu
-struct BubbleMenu: Codable {
+import Foundation
+
+struct BubbleMenuResponse: Codable {
     let statusCode: Int
     let message: String
-    let data: data
+    let data: BubbleData
 }
 
-// MARK: - DataClass
-struct data: Codable {
+struct BubbleData: Codable {
     let menu: [Menu]
     let isPersonalized: Bool
     let total: Int
@@ -22,7 +20,6 @@ struct data: Codable {
     }
 }
 
-// MARK: - Menu
 struct Menu: Codable {
     let label: String
     let targetURL: String
@@ -38,3 +35,4 @@ struct Menu: Codable {
         case showIcon = "show_icon"
     }
 }
+

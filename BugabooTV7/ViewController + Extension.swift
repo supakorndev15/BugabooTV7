@@ -10,6 +10,7 @@ import UIKit
 
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
+    
     func cellRegister() {
         collectionView.register(VerticalCollectionViewCell.self, forCellWithReuseIdentifier: VerticalCollectionViewCell.cellIdentifier)
         collectionView.register(MiniTopCategoryCollectionViewCell.self, forCellWithReuseIdentifier: MiniTopCategoryCollectionViewCell.cellIdentifier)
@@ -103,7 +104,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         case 3,7 :
             return 10
         case 4 :
-            return foodCategoryMockData.count
+            return bubbleMenuVM.menus.count
         case 5 :
             return horizontalMockData.count
         case 6 :
@@ -149,7 +150,9 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
             return cell
         case 4 :
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatListCollectionViewCell.cellIdentifier, for: indexPath) as? CatListCollectionViewCell else {fatalError("Unable deque cell...")}
-            cell.cellData = foodCategoryMockData[indexPath.row]
+
+            let menu = bubbleMenuVM.item(at: indexPath.row)
+            cell.configure(with: menu)
             return cell
             
         case 5 :
