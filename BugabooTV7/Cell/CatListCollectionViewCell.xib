@@ -60,6 +60,7 @@
             </constraints>
             <size key="customSize" width="109" height="136"/>
             <connections>
+                <outlet property="iconImageView" destination="W7P-dD-3EI" id="pNy-ml-dwl"/>
                 <outlet property="imgImageView" destination="1Ii-yC-h24" id="Oq2-NV-14x"/>
                 <outlet property="titleLabel" destination="Q44-jk-FLi" id="UFQ-zd-8r8"/>
             </connections>
