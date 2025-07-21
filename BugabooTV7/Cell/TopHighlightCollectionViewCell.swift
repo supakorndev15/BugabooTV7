@@ -23,14 +23,3 @@ class TopHighlightCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension MainMenuItem {
-    func toMenu() -> Menu {
-        return Menu(
-            label: self.title,
-            targetURL: self.linkURL,
-            iconKey: "", // ถ้าไม่มีให้ใส่ค่าว่าง
-            iconURL: self.imageURL.medium,
-            showIcon: false
-        )
-    }
-}
