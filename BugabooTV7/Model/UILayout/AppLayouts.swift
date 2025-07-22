@@ -1,9 +1,3 @@
-//
-//  AppLayouts.swift
-//  BugabooTV7
-//
-//  Created by MacDetail on 18/7/2568 BE.
-//
 
 import Foundation
 import UIKit

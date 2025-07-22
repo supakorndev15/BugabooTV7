@@ -1,9 +1,3 @@
-//
-//  APIService.swift
-//  BugabooTV7
-//
-//  Created by MacDetail on 19/7/2568 BE.
-//
 
 import Foundation
 import Alamofire
@@ -34,5 +28,4 @@ class APIService {
 }
 
 // https://bff-web-api.bugaboo.tv/bff-web/v1/navigation/highlight-menu?personalized=false
-
 // https://bff-web-api.bugaboo.tv/bff-web/v1/fetch-seo/th%2F

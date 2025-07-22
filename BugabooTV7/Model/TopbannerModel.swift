@@ -1,10 +1,3 @@
-//
-//  TopbannerModel.swift
-//  BugabooTV7
-//
-//  Created by MacDetail on 18/7/2568 BE.
-//
-
 import Foundation
 
 struct TopbannerModel {
